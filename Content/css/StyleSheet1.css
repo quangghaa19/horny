@@ -1,0 +1,38 @@
+﻿body {
+    font-size: 12px;
+}
+/*Toàn bộ trang*/
+.page {
+}
+
+    /*Thanh điều hướng*/
+    .page .navbar {
+        background-color: black;
+        color: white;
+    }
+/*-------------------------------------*/
+    /*Các thành phần chính*/
+    /*Thanh quảng cáo*/
+    .page .maincont .ads {
+        background-color: hotpink;
+        color: white;
+        font-size: 22px;
+    }
+
+    /*Phần lô gô, thanh tìm kiếm...*/
+
+    /*Thanh phân loại sản phẩm*/
+
+/*Slidebar*/
+
+/*Thanh điều hướng*/
+    .page .maincont .row .type{
+        border: black solid 1px;
+    }
+
+    .page .maincont .row .type .border{
+        width: 30px;
+        height: 30px;
+        border: black solid 1px;
+    }
+
