@@ -3,67 +3,75 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <meta name="description" content="Nơi cung cấp những sản phẩm chất lượng đến từ nhiều thương hiệu nổi tiếng nước ngoài.
+          Phục vụ trên toàn quốc.
+          Đã và đang được hàng triệu người tin dùng." />
     <link href="../boostrap4/bootstrap.min.css" rel="stylesheet" />
-    <title></title>
+    <link href="../images/favicon.jpg" rel="shortcut icon" />
+    
+    <title>"Đồ chơi" người lớn | Cảm giác mạnh cùng sự an toàn</title>
 
     <link href="../css/StyleSheet1.css" rel="stylesheet" />
+    <script src="../boostrap4/jquery.min.js"></script>
+    <script src="../boostrap4/popper.min.js"></script>
+    <script src="../boostrap4/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- Toàn bộ trang -->
-    <div class="page container" >
+    <!-- whole page content -->
+    <div id="page" class="container">
 
-        <!-- Thanh điều hướng -->
-        <div class="navbarconr container">
+        <!-- Navigation bar -->
+        <div id="navbarconr" class="container">
 
-            <div class="navbar row">
+            <div class="row">
 
-                <!-- Nội dung trái -->
-                <div class="leftcont col-md-6 row">
-                    <div id="icon-truck"></div>
-                    <div class="text">
-                        <p>Freeship for everyone</p>
+                <!-- Left content -->
+                <div class="col-md-6 row">
+
+                    <div id="icon-truck" class="col-md-1"></div>
+
+                    <div class="col-md-11">
+                        <p id="freeship">FREE SHIP FOR EVERYONE | ON EVERYDAY</p>
                     </div>
 
-                    <div id="icon-slash"></div>
-                    <div class="text">
-                        <p>On everyday</p>
-                    </div>
                 </div>
                 <!-- end -->
-                <!-- Nội dung phải -->
-                <div class="rightcont col-md-6 row">
-                    <div id="fisrtcont">
-                        <div id="icon-cart"></div>
-                        <div class="text">
-                            <p>Shopping bag</p>
+                <!-- Right content -->
+                <div class="col-md-6 row">
+
+                    <div class="row">
+                        <div id="icon-cart" class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <p id="shoppingbag">Shopping bag</p>
                         </div>
                     </div>
 
-                    <div id="secondcont">
-                        <div id="icon-portrait"></div>
-                        <div class="text">
-                            <p>My account</p>
+                    <div class="row">
+                        <div id="icon-portrait" class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <p id="myaccount">My account</p>
                         </div>
                     </div>
 
-                    <div id="thirdcont">
-                        <div id="icon-none"></div>
-                        <div class="text">
-                            <p>Logout</p>
+                    <div class="row">
+                        <div id="icon-none" class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <p id="logout">Logout</p>
                         </div>
                     </div>
 
-                    <div id="fourthcont">
-                        <div id="icon-question"></div>
-                        <div class="text">
-                            <p>Help</p>
+                    <div class="row">
+                        <div id="icon-question" class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <p id="help">Help</p>
                         </div>
                     </div>
 
-                    <div id="fifthcont">
-                        <div id="icon-none"></div>
-                        <div class="text">
-                            <p>Contact us</p>
+                    <div class="row">
+                        <div id="icon-none" class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <p id="contactus">Contact us</p>
                         </div>
                     </div>
 
@@ -73,24 +81,22 @@
 
         </div>
         <!-- end -->
-        
-        <!-- Những phần chính của trang -->
+        <!-- Main parts -->
         <div class="maincont container">
-            <!-- Thanh quảng cáo -->
-            <div class="ads row">
+            <!-- Hot tip-->
+            <div id="hottipconr" class="row">
 
-                <!-- Nội dung bên trái -->
-                <div class="leftcont col-md-8 row">
-                    <div class="text">
-                        <p>INSIDER DEALS HURRY COUNTING DOWN TO SEPTEMBER SALES. UP TO 80% OFF</p>
-                    </div>  
+                <!-- Left content -->
+                <div id="leftcontconr"class="col-md-8 row">
+                    <div class="textconr">
+                        <p id="hottiptext">INSIDER DEALS HURRY COUNTING DOWN TO SEPTEMBER SALES. UP TO 80% OFF</p>
+                    </div>
                 </div>
                 <!-- end -->
-
-                <!-- Nội dung bên phải -->
-                <div class="rightcont col-md-4 row">
-                    <div class="text">
-                        <p>SHOP NOW</p>
+                <!-- Right content -->
+                <div id="rightcontconr"class="col-md-4 row">
+                    <div class="textconr">
+                        <p id="shopnowtext">SHOP NOW</p>
                     </div>
                     <div id="icon-arrow"></div>
                 </div>
@@ -98,122 +104,121 @@
 
             </div>
             <!-- end -->
-
-            <!-- Phần lô gô, thanh tìm kiếm,... -->
-            <div class="shell row">
-
-                <!-- Lô gô -->
-                <div class="col-md-3">
-                    <img src="../images/hornyLogo.png" width="100%"/>
-                </div>
-                <!-- end -->
-
-                <!-- Thanh tìm kiếm -->
-                <div class="col-md-6 row">
-                    <div class="search">
-                        <input type="type" name="name" value="" />
-                    </div>
-                    <div id="icon"></div>
-                </div>
-                <!-- end -->
-
-                <!-- Thông tin liên lạc -->
-                <div class="col-md-3">
-                    <div class="types">
-                        <p>CALL / SMS / Whatsapp</p>
-                    </div>
-                    <div class="number">
-                        <p>+65 9777 2176</p>
-                    </div>
-                </div>
-                <!-- end -->
-
-            </div>
-            <!-- end -->
-
-            <!-- Thanh phân loại sản phẩm -->
-            <div class="prtypes row fl">
-                <div class="text">
-                    <p>MEN</p>
-                </div>
-
-                <div class="text">
-                    <p>WOMEN</p>
-                </div>
-
-                <div class="text">
-                    <p>LUBE, BETTER, SEX</p>
-                </div>
-
-                <div class="text">
-                    <p>ANAL</p>
-                </div>
-
-                <div class="text">
-                    <p>SM FETISH</p>
-                </div>
-
-                <div class="text">
-                    <p>LINGERY</p>
-                </div>
-
-                <div class="text">
-                    <p>PARTY</p>
-                </div>
-
-                <div class="text">
-                    <p>SALES</p>
-                </div>
-            </div>
-            <!-- end -->
-
-            <!-- Slidebar -->
-            <div class="slidebar row">
-                <img src="../images/slidebar.png" width="100%"/>
-            </div>
-            <!-- end -->
-
-            <!-- Thanh điều hướng -->
+            <!-- Logo, search bar and contact info -->
+            <!-- Logo + search + contact info row -->
             <div class="row">
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>10% CASHBACK</p>
+
+                <!-- Logo -->
+                <div class="col-md-3">
+                    <img src="../images/hornyLogo.png" width="100%" />
+                </div>
+                <!-- end -->
+
+                <!-- Search bar -->
+                <div class="col-md-6 row">
+                    <div class="border">
+                        <input type="text" name="name" value="" />
+                    </div>
+                    <div id="icon-search"></div>
+                </div>
+                <!-- end -->
+
+                <!-- Contact info -->
+                <div class="col-md-3">
+                    <div>
+                        <p id="callsmswhatsapp">CALL / SMS / Whatsapp</p>
+                    </div>
+                    <div>
+                        <p id="number">+65 9777 2176</p>
+                    </div>
+                </div>
+                <!-- end -->
+
+            </div>
+            <!-- end -->
+            <!-- Menu-classify products row -->
+            <div class="row">
+
+                <div>
+                    <p class="menutext">MEN</p>
+                </div>
+
+                <div>
+                    <p class="menutext">WOMEN</p>
+                </div>
+
+                <div>
+                    <p class="menutext">LUBE, BETTER, SEX</p>
+                </div>
+
+                <div>
+                    <p class="menutext">ANAL</p>
+                </div>
+
+                <div>
+                    <p class="menutext">SM FETISH</p>
+                </div>
+
+                <div>
+                    <p class="menutext">LINGERY</p>
+                </div>
+
+                <div>
+                    <p class="menutext">PARTY</p>
+                </div>
+
+                <div>
+                    <p class="menutext">SALES</p>
+                </div>
+            </div>
+            <!-- end -->
+            <!-- Slidebar -->
+            <div class="row">
+                <img src="../images/slidebar.png" width="100%" />
+            </div>
+            <!-- end -->
+            <!-- Certification -->
+            <div class="row">
+
+                <div>
+                    <div id="cashback-icon border">logo</div>
+                    <div>
+                        <p class="certification">10% CASHBACK</p>
                     </div>
                 </div>
 
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>GLOBAL DEALS</p>
+                <div>
+                    <div class="globaldeal-icon border">logo</div>
+                    <div>
+                        <p class="certification">GLOBAL DEALS</p>
                     </div>
                 </div>
 
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>MEN'S SALE</p>
+                <div>
+                    <div class="mensale-icon border">logo</div>
+                    <div>
+                        <p class="certification">MEN'S SALE</p>
                     </div>
                 </div>
 
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>SHOPEE MART</p>
+                <div>
+                    <div class="shopeemart-icon border">logo</div>
+                    <div>
+                        <p class="certification">SHOPEE MART</p>
                     </div>
                 </div>
 
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>DINING & TRAVEL DEAL</p>
+                <div>
+                    <div class="dandtdeal-icon border">logo</div>
+                    <div>
+                        <p class="certification">DINING & TRAVEL DEAL</p>
                     </div>
                 </div>
 
-                <div class="type">
-                    <div class="icon border"></div>
-                    <div class="text">
-                        <p>LOWEST PRICE GUARANTEED</p>
+                <div>
+                    <div class="lpgdeal-icon border">logo</div>
+                    <div>
+                        <p class="certification">LOWEST PRICE GUARANTEED</p>
                     </div>
                 </div>
             </div>
@@ -221,52 +226,49 @@
 
         </div>
         <!-- end -->
+        <!-- New products -->
+        <div class="container">
 
-        <!-- Những sản phẩm mới -->
-        <div class="newproducts container">
-
-            <!-- Thanh phân loại -->
+            <!-- Head -->
             <div class="row">
 
-                <!-- Nội dung bên trái -->
-                <div class="leftcont col-md-5 row">
-                    <div class="text">
-                        <p>NEW PRODUCTS</p>
+                <!-- Left content -->
+                <div class="col-md-5 row">
+                    <div class="col-md-5">
+                        <p id="newproducts">NEW PRODUCTS</p>
                     </div>
 
-                    <div class="text">
-                        <p>View all news...</p>
+                    <div class="col-md-7">
+                        <p id="viewallnews">View all news...</p>
                     </div>
                 </div>
                 <!-- end -->
-
-                <!-- Nội dung bên phải -->
-                <div class="rightcont col-md-7 row">
-                    <div class="text">
-                        <p>Male toys</p>
+                <!-- Right content -->
+                <div class="col-md-7 row">
+                    <div class="border">
+                        <p class="npmenu">Male toys</p>
                     </div>
 
-                    <div class="text">
-                        <p>Female toys</p>
+                    <div class="border">
+                        <p class="npmenu">Female toys</p>
                     </div>
 
-                    <div class="text">
-                        <p>Couple toys</p>
+                    <div class="border">
+                        <p class="npmenu">Couple toys</p>
                     </div>
 
-                    <div class="text">
-                        <p>Lube & better sex</p>
+                    <div class="border">
+                        <p class="npmenu">Lube & better sex</p>
                     </div>
                 </div>
                 <!-- end -->
 
             </div>
             <!-- end -->
-
-            <!-- Sản phẩm tiêu biểu và quảng cáo-->
+            <!-- Popular products and advertise -->
             <div class="container row">
 
-                <!-- Sản phẩm 1 -->
+                <!-- Product 1 -->
                 <div class="product col-md-3">
 
                     <!-- Chèn ảnh -->
@@ -323,7 +325,7 @@
                     <!-- end -->
                 </div>
                 <!-- end -->
-                <!-- Sản phẩm 2 -->
+                <!-- Product 2 -->
                 <div class="product col-md-3">
 
                     <!-- Chèn ảnh -->
@@ -381,7 +383,7 @@
 
                 </div>
                 <!-- end -->
-                <!-- Sản phẩm 3 -->
+                <!-- Product 3 -->
                 <div class="product col-md-3">
 
                     <!-- Chèn ảnh -->
@@ -439,7 +441,7 @@
 
                 </div>
                 <!-- end -->
-                <!-- Sản phẩm 4 -->
+                <!-- Advertise product 4 -->
                 <div class="product col-md-3">
 
                     <!-- Chèn ảnh -->
@@ -497,10 +499,9 @@
 
                 </div>
                 <!-- end -->
-                
+
             </div>
             <!-- end -->
-
             <!-- Thanh điều hướng xem tất cả sản phẩm -->
             <div class="viewallprconr row">
                 <div class="text">
@@ -512,25 +513,22 @@
 
         </div>
         <!-- end -->
-
-        <!-- Quảng cáo giảm giá -->
+        <!-- Sale advertisements -->
         <div class=" saleadsconr container">
 
             <div class="row">
 
-                <!-- Quảng cáo 1 -->
+                <!-- Advertisement 1 -->
                 <div class="adsconr col-md-4">
                     <img src="../images/sa1.png" width="100%" />
                 </div>
                 <!-- end -->
-
-                <!-- Quảng cáo 2 -->
+                <!-- Advertisement 2 -->
                 <div class="adsconr col-md-4">
                     <img src="../images/sa2.png" width="100%" />
                 </div>
                 <!-- end -->
-
-                <!-- Quảng cáo 3 -->
+                <!-- Advertisement 3 -->
                 <div class="saleadsconr col-md-4">
                     <img src="../images/sa3.png" width="100%" />
                 </div>
@@ -539,24 +537,191 @@
             </div>
         </div>
         <!-- end -->
-
         <!-- Shop onsale and shop by category -->
         <div class="ons&catconr container">
-            <!-- demo github 422020 sjflskdjfklsdf-->
+
             <div class="row">
 
+                <!-- Onsale products -->
+                <div class="prodconr col-md-9">
+                    <!-- On sale bar -->
+                    <div class="onsbarconr row">
+
+                        <!-- Left icon -->
+                        <div class="leftconr col-md-2"></div>
+                        <!-- end -->
+                        <!-- Middle part -->
+                        <div class="middleconr col-md-8 row">
+
+                            <div class="textconr col-md-7">
+                                <p>ON SALE NOW | END IN</p>
+                            </div>
+
+                            <div class="timeoutconr col-md-5 row">
+
+                                <div class="dayconr border">00</div>
+                                <div class="colonconr">
+                                    <p style="font-size=20px">:</p>
+                                </div>
+
+                                <div class="hourconr border">20</div>
+                                <div class="colonconr">
+                                    <p style="font-size=20px">:</p>
+                                </div>
+
+                                <div class="minuteconr border">54</div>
+
+                            </div>
+
+                        </div>
+                        <!-- end -->
+                        <!-- Right icon -->
+                        <div class="rightconr col-md-2"></div>
+                        <!-- end -->
+
+                    </div>
+                    <!-- end -->
+                    <!-- Products -->
+                    <div class="prodconr row">
+                        <!-- Product 1 -->
+                        <div class="product col-md-4">
+
+                            <!-- Add product -->
+                            <div class="imgconr">
+                                <img src="../images/osp1.PNG" width="100%" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="prnameconr">
+                                <p>Horny products</p>
+                            </div>
+                            <!-- end -->
+                            <!-- More info -->
+                            <div class="infoconr">
+                                <p>Ms Kimochi Vibration Sakura Edition</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Price -->
+                            <div class="priceconr">
+                                <p>$36.90</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div class="starconr">
+                                <div class="border">5 sao</div>
+                            </div>
+                            <!-- end -->
+
+                        </div>
+                        <!-- end -->
+                        <!-- Product 2 -->
+                        <div class="product col-md-4">
+
+                            <!-- Add product -->
+                            <div class="imgconr">
+                                <img src="../images/osp2.PNG" width="100%" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="prnameconr">
+                                <p>Sliquid Bundle Deal!</p>
+                            </div>
+                            <!-- end -->
+                            <!-- More info -->
+                            <div class="infoconr">
+                                <p>Organic Natural 2oz +</p>
+                                <p>Sensation 2oz +</p>
+                                <p>Natural Gel 2oz</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Price -->
+                            <div class="priceconr">
+                                <p>$36.90</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div class="starconr">
+                                <div class="border">5 sao</div>
+                            </div>
+                            <!-- end -->
+
+                        </div>
+                        <!-- end -->
+                        <!-- Product 3 -->
+                        <div class="product col-md-4">
+
+                            <!-- Add product -->
+                            <div class="imgconr">
+                                <img src="../images/osp3.PNG" width="100%" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="prnameconr">
+                                <p>We Vibe Sync Aqua</p>
+                            </div>
+                            <!-- end -->
+                            <!-- More info -->
+                            <div class="infoconr">
+                                <p>Free London Art Power Bank 9000mgh</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Price -->
+                            <div class="priceconr">
+                                <p>$36.90</p>
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div class="starconr">
+                                <div class="border">5 sao</div>
+                            </div>
+                            <!-- end -->
+
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <!-- end -->
+                    <!-- View more -->
+                    <div class="viewmoreconr row">
+
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3">
+
+                            <div class="textconr">
+                                <p>View more</p>
+                            </div>
+
+                            <div class="icon"></div>
+
+                        </div>
+                    </div>
+                    <!-- end -->
+
+                    <!-- Category bar -->
+
+                    <!-- end -->
+                </div>
+                <!-- end -->
+                <!-- Advertisement and social media-->
+                <div class="ads col-md-3">
+
+                    <!-- Advertisement picture -->
+                    <img src="../images/longAds.png" width="100%" />
+                    <!-- end -->
+
+                    <!-- Social media -->
+                    <img src="../images/soMedia.png" width="100%"/>
+                    <!-- end -->
+
+                </div>
+                <!-- end -->
+
             </div>
+            <!-- end -->
 
         </div>
         <!-- end -->
     </div>
     <!-- end -->
-
-
-
-    <script src="../boostrap4/jquery.min.js"></script>
-    <script src="../boostrap4/popper.min.js"></script>
-    <script src="../boostrap4/bootstrap.min.js"></script>
 
 </body>
 </html>
