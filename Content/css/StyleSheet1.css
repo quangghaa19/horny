@@ -1,38 +1,27 @@
 ﻿body {
-    font-size: 12px;
+    
+    font-size: 12px!important;
+    font: Open Sans!important;
 }
-/*Toàn bộ trang*/
-.page {
+/*Page Header*/
+.headercontent {
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    line-height: 16px;
 }
 
-    /*Thanh điều hướng*/
-    .page .navbar {
-        background-color: black;
-        color: white;
-    }
-/*-------------------------------------*/
-    /*Các thành phần chính*/
-    /*Thanh quảng cáo*/
-    .page .maincont .ads {
-        background-color: hotpink;
-        color: white;
-        font-size: 22px;
-    }
+/*Main content*/
+.hotcontent{
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
 
-    /*Phần lô gô, thanh tìm kiếm...*/
-
-    /*Thanh phân loại sản phẩm*/
-
-/*Slidebar*/
-
-/*Thanh điều hướng*/
-    .page .maincont .row .type{
-        border: black solid 1px;
-    }
-
-    .page .maincont .row .type .border{
-        width: 30px;
-        height: 30px;
-        border: black solid 1px;
-    }
-
+/*Search bar*/
+.horny {
+    background: url('../hornyIMG/horny.png') no-repeat -9px -3px;
+    width: 156px;
+    height: 60px;
+}
