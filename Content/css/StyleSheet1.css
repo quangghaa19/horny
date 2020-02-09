@@ -1,0 +1,276 @@
+﻿body {
+    
+    font-size: 12px!important;
+    font: Open Sans!important;
+}
+/*Page Header*/
+.headercontent {
+    color: white;
+    font-weight: 500;
+}
+
+/*Main part*/
+.hotcontent{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/*Hot tip*/
+.hottip-head {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #FF5B8F;
+}
+
+/*Search bar*/
+.horny {
+    background: url('../hornyIMGS/horny.png') no-repeat -9px -3px;
+    width: 156px;
+    height: 60px;
+}
+.fa-search:before{
+    font-size: 22px;
+    line-height: 1.8;
+    
+}
+
+.search-icon {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+
+}
+button,input{
+    font-size: 15px!important;
+    color: black;
+    border: none;
+
+}
+/*Menu*/
+.menu {
+    font-weight: 700;
+    padding: 0px 31px;
+    font-size: 14px;
+}
+
+/*Slide*/
+.slide {
+    background: url('../hornyIMGS/slide.png') no-repeat 0 0;
+    width: 1170px;
+    height: 493px;
+}
+
+/*Policy*/
+.p-one {
+    background: url('../hornyIMGS/p1.png') no-repeat 0 0;
+    width: 62px;
+    height: 64px;
+}
+
+.p-two {
+    background: url('../hornyIMGS/p2.png') no-repeat 0 0;
+    width: 54px;
+    height: 54px;
+}
+
+.p-three {
+    background: url('../hornyIMGS/p3.png') no-repeat 0 0;
+    width: 60px;
+    height: 58px;
+}
+
+.p-four {
+    background: url('../hornyIMGS/p4.png') no-repeat 0 0;
+    width: 56px;
+    height: 51px;
+}
+
+.p-five {
+    background: url('../hornyIMGS/p5.png') no-repeat 0 0;
+    width: 50px;
+    height: 51px;
+}
+
+.p-six {
+    background: url('../hornyIMGS/p6.png') no-repeat 0 0;
+    width: 54px;
+    height: 63px;
+}
+
+.policy{
+    padding: 20px 20px 0px 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.policy-icon-size{
+    height: inherit;
+    width: inherit;
+}
+
+.policy-content {
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.policy-img-wrap{
+    height: 63px;
+}
+.col-pad{
+    padding: 0px 40px;
+}
+
+/*New products*/
+.newpro-head {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+
+button{
+    color: white;
+    background-color: black;
+}
+
+.addtocart {
+    padding: 9px 0px;
+    width: 95%;
+    background-color: #FF5B8F;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    
+}
+
+    .addtocart button {
+        color: white;
+        background-color: #FF5B8F;
+    }
+
+.productname{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hint{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.prices{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.oldprice{
+    color: black;
+}
+
+.newprice {
+    margin-left:10px;
+    color: #FF5B8F;
+}
+
+.salepercent{
+    margin-left: 15px;
+    color: grey;
+}
+
+#viewall{
+    margin-top: 20px;
+    padding: 0;
+}
+
+#viewall button {
+    border: none;
+    color: #FF5B8F;
+    background-color: white;
+    font-size: 15px!important;
+}
+
+/*On sale products*/
+.onsale-head{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.onsale-icon{
+    font-size: 22px;
+}
+
+.clock {
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.time {
+    width: 45px;
+    height: 45px;
+    background-color: #FF5C90;
+    color: white;
+}
+
+.colon {
+    margin: 0 10px;
+    height: inherit;
+    padding-top: 2px;
+}
+
+/*Shop by category*/
+.catproname{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/*Customer sayings*/
+
+.said{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight:400;
+    font-style:italic;
+}
+
+#cussconr button{
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+/*Featured and brands*/
+.featured-brands{
+    font-size: 23px;
+
+}
+
+/*Footer*/
+.footer-head{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-content{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.email{
+    border: black 0.5px solid;
+}
+
+.email input{
+    font-size: 15px!important;
+
+}
+
