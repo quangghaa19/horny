@@ -31,88 +31,88 @@
 </head>
 <body>
     <!-- whole page content -->
-    <div id="page" class="container-fluid" style="padding-left:unset; padding-right: unset">
+    <div id="page">
 
         <!-- Page Header -->
-        <div id="header" class="container-fluid" style="padding-left:unset; padding-right: unset; background-color:black">
+        <div id="header">
 
-            <div class="container">
+            <!--<div class="container">-->
 
-                <div class="row" style="padding: 9px 0px">
-                    <!-- Left content -->
+            <div class="row">
+                <!-- Left content -->
 
-                    <div class="col-md-6 d-md-flex align-items-md-center" style="padding: 0">
+                <div class="col-md-6 unset-padding d-md-flex align-items-md-center">
 
-                        <span id="freeship" class="headercontent"><i class="fas fa-truck" style="color: white"></i></span>
-                        <span class="headercontent" style="margin-left: 4px">FREE SHIP FOR EVERYONE | ON EVERYDAY</span>
+                    <i class="fas fa-truck" style="margin-right: 7px"></i>
+                    FREE SHIP FOR EVERYONE | ON EVERYDAY
+
+                </div>
+                <!-- end -->
+                <!-- Right content -->
+
+                <div class="col-md-6 unset-padding d-md-flex justify-content-md-end align-items-md-center">
+
+                    <!-- ------------------------------ -->
+                    <div class="right-margin">
+
+                        <i class="fas fa-shopping-cart" style="margin-right: 4px"></i>
+                        Shopping bag
+
 
                     </div>
-                    <!-- end -->
-                    <!-- Right content -->
 
-                    <div class="col-md-6 d-md-flex justify-content-md-end align-items-md-center" style="padding: 0">
+                    <div class="right-margin">
 
-                        <!-- ------------------------------ -->
-                        <div style="margin-right: 20px">
-
-                            <span class="headercontent"><i class="fas fa-shopping-cart" style="color: white"></i></span>
-                            <span class="headercontent" style="margin-left: 4px">Shopping bag</span>
+                        <i class="far fa-user" style="margin-right: 4px"></i>
+                        My account
 
 
-                        </div>
-
-                        <div style="margin-right: 20px">
-
-                            <span class="headercontent"><i class="far fa-user" style="color:white"></i></span>
-                            <span class="headercontent" style="margin-left: 4px">My account</span>
-
-
-                        </div>
-
-                        <div style="margin-right: 20px">
-
-                            <span class="headercontent">Logout</span>
-
-
-                        </div>
-
-                        <div style="margin-right: 20px">
-
-                            <span class="headercontent"><i class="far fa-question-circle" style="color:white"></i></span>
-                            <span class="headercontent" style="margin-left: 4px">Help</span>
-
-
-                        </div>
-
-                        <div>
-
-                            <span class="headercontent">Contact us</span>
-
-                        </div>
                     </div>
 
-                    <!-- end -->
+                    <div class="right-margin">
+
+                        Logout
+
+
+                    </div>
+
+                    <div class="right-margin">
+
+                        <i class="far fa-question-circle" style="margin-right"></i>
+                        Help
+
+
+                    </div>
+
+                    <div>
+
+                        Contact us
+
+                    </div>
                 </div>
 
+                <!-- end -->
             </div>
+
+            <!--</div>-->
 
 
         </div>
         <!-- end -->
         <!-- Page Body -->
-        <div class="container" style="padding: 0">
+        <div id="body-part">
             <!-- Main parts -->
-            <div class="container">
+            <!--<div class="container">-->
                 <!-- Hot tip-->
-                <div class="row hottip-head">
+                <div id="hot-title" class="row">
 
                     <!-- Left content -->
-                    <div class="col-md-9 hotcontent d-md-flex align-items-md-center justify-content-md-start">
+                    <div class="col-md-9 d-md-flex align-items-md-center">
                         INSIDER DEALS HURRY COUNTING DOWN TO SEPTEMBER SALES. UP TO 80% OFF
                     </div>
                     <!-- end -->
                     <!-- Right content -->
-                    <div class="col-md-3 hotcontent d-md-flex align-items-md-center justify-content-md-end">
+                    <div class="col-md-3 d-md-flex align-items-md-center justify-content-md-end">
 
                         SHOP NOW<i class="fas fa-arrow-right" style="padding-left: 12px"></i>
 
@@ -123,136 +123,144 @@
                 <!-- end -->
                 <!-- Logo, search bar and contact info -->
                 <!-- Logo + search + contact info row -->
-                <div class="row d-md-flex flex-md-row align-items-md-center" style="margin: 22px -15px">
+                <div id="search" class="row">
 
                     <!-- Logo -->
-                    <div class="col-md-3" style="padding: 0">
+                    <div class="col-md-3 unset-padding">
 
-                        <div class="horny"></div>
+                        <img src="../hornyIMGS/horny.png" style="margin-left: -9px; width: auto" alt="horny" />
 
                     </div>
                     <!-- end -->
                     <!-- Search bar -->
-                    <div class="col-md-6" style="padding: 0">
+                    
+                    <div id="search-wrap" class="col-md-6 d-md-flex align-items-md-center" style="padding: 0">
 
-                        <div class="row" style="margin-right: 20%; border: black 1px solid; border-radius: 5px">
-                            <div class="col-md-10 d-md-flex align-items-md-center" style="padding: 0px 0px 0px 22px">
+                        <div id="search-row" class="row">
+                            <div id="search-space" class="col-md-10">
                                 <input class="type=" text" name="search" value="" size="" placeholder="Search entire store here..." />
                             </div>
 
-                            <button type="button" class="col-md-2 search-icon d-md-flex flex-md-row justify-content-md-center align-items-md-center">
-                                <i class="fas fa-search"></i>
+                            <button id="search-icon" title="searching..." type="button" class="col-md-2">
+                                <i class="fas fa-search" style="font-size:22px"></i>
                             </button>
                         </div>
                     </div>
+
                     <!-- end -->
                     <!-- Contact info -->
-                    <div class="col-md-3" style="padding: 0">
-                        <div class="d-md-flex justify-content-md-end" style="font-size: 13px; font-weight: 700">
-                            CALL / SMS / Whatsapp
+                    <div class="col-md-3 unset-padding">
+
+                        <div>
+                            <div id="contact" class="d-md-flex justify-content-md-end">
+                                CALL / SMS / Whatsapp
+                            </div>
+                            <div id="number" class="d-md-flex justify-content-md-end">
+                                +65 9777 2176
+                            </div>
                         </div>
-                        <div class="d-md-flex justify-content-md-end" style="font-size: 28px; font-weight: 900">
-                            +65 9777 2176
-                        </div>
+
                     </div>
                     <!-- end -->
 
                 </div>
                 <!-- end -->
                 <!-- Menu-classify products row -->
-                <div class="d-md-flex justify-content-md-center" style="margin: 20px -15px">
+                <div id="menu" class="d-md-flex justify-content-md-center">
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         MEN
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         WOMEN
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         LUBE, BETTER, SEX
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         ANAL
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         SM FETISH
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         LINGERY
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         PARTY
                     </div>
 
-                    <div class="menu d-md-flex align-items-md-center">
+                    <div class="item d-md-flex align-items-md-center">
                         SALES
                     </div>
                 </div>
                 <!-- end -->
                 <!-- Slidebar -->
                 <div class="row">
-                    <div class="col-md slide"></div>
+
+                    <img src="../hornyIMGS/slide.png" style="width: 100%" alt="sexy" />
+                    <!--<div class="col-md slide"></div>-->
                 </div>
 
                 <!-- end -->
                 <!-- Policy -->
 
-                <div class="row" style="padding: 45px 0px">
+                <div id="policy" class="row">
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-one"></div>
                         </div>
-                        <div class="policy-content text-md-center">10% CASH BACK</div>
+                        <div class="text-md-center">10% CASH BACK</div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-two"></div>
                         </div>
-                        <div class="policy-content text-md-center">GLOBAL DEALS</div>
+                        <div class="text-md-center">GLOBAL DEALS</div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-three"></div>
                         </div>
-                        <div class="policy-content text-md-center">MEN'S SALE</div>
+                        <div class="text-md-center">MEN'S SALE</div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-four"></div>
                         </div>
-                        <div class="policy-content text-md-center">SHOPEE MART</div>
+                        <div class="text-md-center">SHOPEE MART</div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-five"></div>
                         </div>
-                        <div class="policy-content text-md-center">DINING & TRAVEL DEAS</div>
+                        <div class="text-md-center">DINING & TRAVEL DEAS</div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
                             <div class="p-six"></div>
                         </div>
-                        <div class="policy-content text-md-center">LOWEST PRICE GUARANTEED</div>
+                        <div class="text-md-center">LOWEST PRICE GUARANTEED</div>
                     </div>
                 </div>
 
                 <!-- end -->
 
-            </div>
+            <!--</div>-->
             <!-- end -->
             <!-- New products -->
-            <div class="container">
+            <div id="newproducts" >
 
                 <!-- Head -->
                 <div class="row newpro-head">
@@ -469,23 +477,23 @@
             </div>
             <!-- end -->
             <!-- Sale advertisements -->
-            <div id="saleadsconr" class="container" style="margin-top: 45px">
+            <div id="saleads">
 
                 <div class="row">
 
                     <!-- Advertisement 1 -->
-                    <div class="col-md-4">
-                        <img src="../images/sa1.png" style="width: 100%" alt="sale-10%" />
+                    <div class="unset-padding col-md-4 d-md-flex justify-content-md-start">
+                        <img src="../hornyIMGS/bn1.png" style="width: 100%" alt="sale-10%" />
                     </div>
                     <!-- end -->
                     <!-- Advertisement 2 -->
                     <div class="col-md-4">
-                        <img src="../images/sa2.png" style="width: 100%" alt="sale-15%" />
+                        <img src="../hornyIMGS/bn2.png" style="width: 100%; height: 100%" alt="sale-15%" />
                     </div>
                     <!-- end -->
                     <!-- Advertisement 3 -->
-                    <div class="col-md-4">
-                        <img src="../images/sa3.png" style="width: 100%" alt="sale-20%" />
+                    <div class="unset-padding col-md-4 d-md-flex justify-content-md-end">
+                        <img src="../hornyIMGS/bn3.png" style="width: 100%" alt="sale-20%" />
                     </div>
                     <!-- end -->
 
@@ -494,12 +502,12 @@
             </div>
             <!-- end -->
             <!-- Onsale now and shop by category -->
-            <div id="onsANDcatconr" class="container" style="margin-top: 35px">
+            <div id="onsale-cat">
 
                 <div class="row">
 
                     <!-- Onsale now products -->
-                    <div class="col-md-9">
+                    <div class="col-md-9 unset-padding">
                         <!-- On sale head -->
                         <div class="row">
 
@@ -661,7 +669,7 @@
                         </div>
                         <!-- end -->
                         <!-- Category head -->
-                        <div class="row" style="margin-top: 45px">
+                        <div id="category-head" class="row">
                             <div class="col-md onsale-head align-middle text-md-center">
                                 <div>SHOP BY CATEGORY</div>
                                 <i class="onsale-icon fa-grip-lines"></i>
@@ -670,90 +678,119 @@
                         <!-- end -->
                         <!-- Category product -->
                         <!-- first row -->
-                        <div class="row" style="margin-top: 35px">
+                        <div id="first-row" class="row">
 
                             <!-- Product 1 -->
-                            <div class="col-md-4">
+                            <div class="unset-padding col-md-4 d-md-flex justify-content-md-start">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat1.png" style="width: 100%" alt="dildols" />
-                                </div>
+                                <div class="product-wrap">
 
-                                <div class="catproname text-md-center">
-                                    DILDOLS
+                                    <div>
+                                        <img src="../hornyIMGS/cat1.png" style="width: 100%; height: 100%" alt="dildols" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        DILDOLS
+                                    </div>
+
                                 </div>
+                                
 
                             </div>
                             <!-- end -->
                             <!-- Product 2 -->
-                            <div class="col-md-4">
+                            <div class="col-md-4 unset-padding d-md-flex justify-content-md-center">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat2.png" style="width: 100%" alt="penis ring" />
-                                </div>
+                                <div class="product-wrap">
 
-                                <div class="catproname text-md-center">
-                                    PENIS RING
+                                    <div>
+                                        <img src="../hornyIMGS/cat2.png" style="width: 100%; height: 100%" alt="penis ring" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        PENIS RING
+                                    </div>
+
                                 </div>
+                                
 
                             </div>
                             <!-- end -->
                             <!-- Product 3 -->
-                            <div class="col-md-4">
+                            <div class="col-md-4 unset-padding d-md-flex justify-content-md-end">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat3.png" style="width: 100%" alt="lubricants" />
+                                <div class="product-wrap">
+
+                                    <div>
+                                        <img src="../hornyIMGS/cat3.png" style="width: 100%; height:100%" alt="lubricants" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        LUBRICANTS
+                                    </div>
+
                                 </div>
-
-                                <div class="catproname text-md-center">
-                                    LUBRICANTS
-                                </div>
-
+                                
                             </div>
                             <!-- end -->
 
                         </div>
                         <!-- end -->
                         <!-- Second row -->
-                        <div class="row" style="margin-top: 25px">
+                        <div id="second-row" class="row">
 
                             <!-- Product 1 -->
-                            <div class="col-md-4">
+                            <div class="col-md-4 unset-padding d-md-flex justify-content-md-start">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat4.png" style="width: 100%" alt="sm fetish" />
-                                </div>
+                                <div class="product-wrap">
 
-                                <div class="catproname text-md-center">
-                                    SM FETISH
+                                    <div>
+                                        <img src="../hornyIMGS/cat4.png" style="width: 100%; height:100%" alt="sm fetish" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        SM FETISH
+                                    </div>
+
                                 </div>
+                                
 
                             </div>
                             <!-- end -->
                             <!-- Product 2 -->
-                            <div class="col-md-4">
+                            <div class="col-md-4 unset-padding d-md-flex justify-content-md-center">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat5.png" style="width: 100%" alt="vibrators" />
+                                <div class="product-wrap">
+
+                                    <div>
+                                        <img src="../hornyIMGS/cat5.png" style="width: 100%; height: 100%" alt="vibrators" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        VIBRATORS
+                                    </div>
+
+
                                 </div>
-
-                                <div class="catproname text-md-center">
-                                    VIBRATORS
-                                </div>
-
+                                
                             </div>
                             <!-- end -->
                             <!-- Product 3 -->
-                            <div class="col-md-4">
+                            <div class="col-md-4 unset-padding d-md-flex justify-content-md-end">
 
-                                <div>
-                                    <img src="../hornyIMGS/cat6.png" style="width: 100%" alt="masturbators" />
+                                <div class="product-wrap">
+
+                                    <div>
+                                        <img src="../hornyIMGS/cat6.png" style="width: 100%; height: 100%" alt="masturbators" />
+                                    </div>
+
+                                    <div class="catproname text-md-center">
+                                        MASTURBATORS
+                                    </div>
+
+
                                 </div>
-
-                                <div class="catproname text-md-center">
-                                    MASTURBATORS
-                                </div>
-
+                                
                             </div>
                             <!-- end -->
 
@@ -763,14 +800,19 @@
                     </div>
                     <!-- end -->
                     <!-- Advertisement and social media-->
-                    <div class="col-md-3">
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-end">
 
-                        <!-- Advertisement picture -->
-                        <img src="../hornyIMGS/sideAds.png" style="width:100%" alt="side advertisement" />
-                        <!-- end -->
-                        <!-- Social media -->
-                        <img src="../hornyIMGS/socialMedia.png" style="margin-top: 20px; width: 100%" alt="social media" />
-                        <!-- end -->
+                        <div class="product-wrap">
+
+                            <!-- Advertisement picture -->
+                            <img src="../hornyIMGS/sideAds.png" style="width:100%" alt="side advertisement" />
+                            <!-- end -->
+                            <!-- Social media -->
+                            <img src="../hornyIMGS/socialMedia.png" style="margin-top: 20px; width: 100%" alt="social media" />
+                            <!-- end -->
+
+                        </div>
+                        
 
                     </div>
                     <!-- end -->
@@ -780,8 +822,8 @@
             </div>
             <!-- end -->
             <!-- Store in store -->
-            <div id="stInstconr" class="container">
-                <div class="row" style="margin-top: 45px">
+            <div id="storeinstore">
+                <div id="storeinstore-head" class="row">
                     <div class="col-md onsale-head align-middle text-md-center">
                         <div>STORE IN STORE</div>
                         <i class="onsale-icon fa-grip-lines"></i>
@@ -791,20 +833,29 @@
 
                 <div class="row">
 
-                    <div class="col-md-3">
-                        <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-start">
+                        <div class="grey-square">
+                            <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                        </div>
+                        
                     </div>
 
-                    <div class="col-md-3">
-                        <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                    <div class="col-md-3 unset-padding ">
+                        <div class="grey-square margin-left">
+                            <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                        </div>
                     </div>
 
-                    <div class="col-md-3">
-                        <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                    <div class="col-md-3 unset-padding  d-md-flex justify-content-md-end">
+                        <div class="grey-square margin-right">
+                            <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                        </div>
                     </div>
 
-                    <div class="col-md-3">
-                        <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-end">
+                        <div class="grey-square">
+                            <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
+                        </div>
                     </div>
 
                 </div>
@@ -812,8 +863,8 @@
             </div>
             <!-- end -->
             <!-- What customers are saying -->
-            <div id="cussconr" class="container">
-                <div class="row" style="margin-top: 45px">
+            <div id="customersaying">
+                <div id="customersaying-headline" class="row" >
                     <div class="col-md onsale-head align-middle text-md-center">
                         <div>WHAT CUSTOMER ARE SAYING</div>
                         <i class="onsale-icon fa-grip-lines"></i>
@@ -823,123 +874,136 @@
                 <div class="row" style="margin-top: 20px">
 
                     <!-- Customer saying product 1 -->
-                    <div class="col-md-3" style="padding: 0">
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-start">
 
-                        <!-- Product image -->
-                        <div>
-                            <img src="../hornyIMGS/cus1.png" style="width:95%" alt="CBX" />
-                        </div>
-                        <!-- end -->
-                        <!-- Product name -->
-                        <div class="productname">
-                            Horny products
-                        </div>
-                        <!-- end -->
-                        <!-- More product infomation -->
-                        <div class="hint">
-                            Mr Kimochi Vibrator Poseidon
-                        </div>
-                        <!-- end -->
-                        <!-- Star level -->
-                        <div style="margin-top:10px">
-                            <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
-                        </div>
-                        <!-- end -->
+                        <div class="grey-square">
+                            <!-- Product image -->
+                            <div>
+                                <img src="../hornyIMGS/cus1.png" style="width:auto" alt="CBX" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="productname">
+                                Horny products
+                            </div>
+                            <!-- end -->
+                            <!-- More product infomation -->
+                            <div class="hint">
+                                Mr Kimochi Vibrator Poseidon
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div style="margin-top:10px">
+                                <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
+                            </div>
+                            <!-- end -->
 
-                        <div class="said">"Set up Perspiciatis unde"</div>
+                            <div class="said">"Set up Perspiciatis unde"</div>
 
-                        <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
-
+                            <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
+                        </div>
+                        
                     </div>
                     <!-- end -->
                     <!-- Customer saying product 2 -->
-                    <div class="col-md-3" style="padding: 0">
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-start">
 
-                        <!-- Product image -->
-                        <div>
-                            <img src="../hornyIMGS/cus2.png" style="width:95%" alt="bucked" />
-                        </div>
-                        <!-- end -->
-                        <!-- Product name -->
-                        <div class="productname">
-                            Bucked
-                        </div>
-                        <!-- end -->
-                        <!-- More product infomation -->
-                        <div class="hint">
-                            Mount Hybrid Orginal Lubricant 60ml/2oz
-                        </div>
-                        <!-- end -->
-                        <!-- Star level -->
-                        <div style="margin-top:10px">
-                            <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
-                        </div>
-                        <!-- end -->
+                        <div class="grey-square customer-margin-left">
+                            <!-- Product image -->
+                            <div>
+                                <img src="../hornyIMGS/cus2.png" style="width:auto" alt="bucked" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="productname">
+                                Bucked
+                            </div>
+                            <!-- end -->
+                            <!-- More product infomation -->
+                            <div class="hint">
+                                Mount Hybrid Orginal Lubricant 60ml/2oz
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div style="margin-top:10px">
+                                <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
+                            </div>
+                            <!-- end -->
 
-                        <div class="said">"Set up Perspiciatis unde"</div>
+                            <div class="said">"Set up Perspiciatis unde"</div>
 
-                        <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left:5px"></i></button>
-
+                            <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left:5px"></i></button>
+                        </div>
+                        
                     </div>
                     <!-- end -->
                     <!-- Customer saying product 3 -->
-                    <div class="col-md-3" style="padding: 0">
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-end">
 
-                        <!-- Product image -->
-                        <div>
-                            <img src="../hornyIMGS/cus3.png" style="width:95%" alt="skinception" />
-                        </div>
-                        <!-- end -->
-                        <!-- Product name -->
-                        <div class="productname">
-                            Skinception
-                        </div>
-                        <!-- end -->
-                        <!-- More product infomation -->
-                        <div class="hint">
-                            Intensive Stretch Mark Therapy
-                        </div>
-                        <!-- end -->
-                        <!-- Star level -->
-                        <div style="margin-top:10px">
-                            <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
-                        </div>
-                        <!-- end -->
+                        <div class="grey-square customer-margin-right">
 
-                        <div class="said">"Set up Perspiciatis unde"</div>
+                            <!-- Product image -->
+                            <div>
+                                <img src="../hornyIMGS/cus3.png" style="width:auto" alt="skinception" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="productname">
+                                Skinception
+                            </div>
+                            <!-- end -->
+                            <!-- More product infomation -->
+                            <div class="hint">
+                                Intensive Stretch Mark Therapy
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div style="margin-top:10px">
+                                <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
+                            </div>
+                            <!-- end -->
 
-                        <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
+                            <div class="said">"Set up Perspiciatis unde"</div>
+
+                            <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
+
+                        </div>
+                        
 
                     </div>
                     <!-- end -->
                     <!-- Customer saying product 4 -->
-                    <div class="col-md-3" style="padding: 0">
+                    <div class="col-md-3 unset-padding d-md-flex justify-content-md-end">
 
-                        <!-- Product image -->
-                        <div>
-                            <img src="../hornyIMGS/cus1.png" style="width:95%" alt="moxie by we-vibe" />
-                        </div>
-                        <!-- end -->
-                        <!-- Product name -->
-                        <div class="productname">
-                            Moxie By We-Vibe
-                        </div>
-                        <!-- end -->
-                        <!-- More product infomation -->
-                        <div class="hint">
-                            Penty Vibe
-                        </div>
-                        <!-- end -->
-                        <!-- Star level -->
-                        <div style="margin-top:10px">
-                            <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
-                        </div>
-                        <!-- end -->
+                        <div class="grey-square">
 
-                        <div class="said">"Set up Perspiciatis unde"</div>
+                            <!-- Product image -->
+                            <div>
+                                <img src="../hornyIMGS/cus1.png" style="width:auto" alt="moxie by we-vibe" />
+                            </div>
+                            <!-- end -->
+                            <!-- Product name -->
+                            <div class="productname">
+                                Moxie By We-Vibe
+                            </div>
+                            <!-- end -->
+                            <!-- More product infomation -->
+                            <div class="hint">
+                                Penty Vibe
+                            </div>
+                            <!-- end -->
+                            <!-- Star level -->
+                            <div style="margin-top:10px">
+                                <img src="../hornyIMGS/star.png" style="width:auto" alt="starlevel" />
+                            </div>
+                            <!-- end -->
 
-                        <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
+                            <div class="said">"Set up Perspiciatis unde"</div>
 
+                            <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
+
+                        </div>
+                        
                     </div>
                     <!-- end -->
 
@@ -947,7 +1011,7 @@
             </div>
             <!-- end -->
             <!-- Featured brands -->
-            <div id="fbconr" class="container" style="margin-top: 45px; padding: 0">
+            <div id="featuredbrands">
                 <div class="row">
 
                     <!-- Featured brands' logo -->
@@ -989,13 +1053,13 @@
         </div>
         <!-- end -->
         <!-- Page footer -->
-        <div class="container-fluid" style="padding: 50px 0; margin-top: 55px; border-top:#80808057 1.5px solid">
-            <div id="wiconr" class="container" style="padding: 0">
+        <div id="footer">
+            <!--<div id="wiconr" class="container" style="padding: 0">-->
 
-                <div class="row" style="">
+                <div class="row">
 
                     <!-- Left content -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 unset-padding">
 
                         <!--  -->
                         <div class="row">
@@ -1067,8 +1131,8 @@
                     </div>
                     <!-- end -->
                     <!-- Right content -->
-                    <div class="col-md-6">
-                        <div class="container">
+                    <div class="col-md-6 unset-padding">
+                        <!--<div class="container">-->
                             <!-- Head -->
                             <div class="footer-head">
                                 <p class="headline">STAY IN TOUCH</p>
@@ -1082,23 +1146,23 @@
                             </div>
 
 
-                            <div class="row email" style="margin: 0">
+                            <div class="row email">
                                 <div class="col-md-10 d-md-flex align-items-md-center" style="padding: 15px 25px">
                                     <input type="text" name="name" value="" placeholder="Enter your email" />
                                 </div>
-                                <div class="col-md-2" style="padding: 0">
+                                <div class="col-md-2 unset-padding">
                                     <button type="button" style="width: inherit; height: 100%; padding: 0">Sign up</button>
                                 </div>
                             </div>
 
 
-                            <div class="row" style="margin-top: 30px">
-                                <div class="col-md-6">
+                            <div class="row margin-top">
+                                <div class="col-md-6 unset-padding">
                                     <div class="footer-head">CONNECT WITH US</div>
 
                                     <img src="../hornyIMGS/connect-icon.png" style="margin-top: 20px; width: auto" alt="connect with us" />
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 unset-padding">
                                     <div class="footer-head">PAYMENT OPTION</div>
                                     <div class="d-md-flex" style="margin-top: 20px">
                                         <img src="../hornyIMGS/pay1.png" style="width: auto" alt="cod" />
@@ -1110,12 +1174,12 @@
                                 </div>
                             </div>
 
-                        </div>
+                        <!--</div>-->
                     </div>
                     <!-- end -->
                 </div>
 
-            </div>
+            <!--</div>-->
         </div>
         <!-- end -->
     </div>

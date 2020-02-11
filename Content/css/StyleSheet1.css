@@ -1,66 +1,131 @@
 ﻿body {
-    
-    font-size: 12px!important;
-    font: Open Sans!important;
-}
-/*Page Header*/
-.headercontent {
-    color: white;
-    font-weight: 500;
+    font-size: 14px;
 }
 
-/*Main part*/
-.hotcontent{
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+/*Page*/
+
+#page{
+    display: block;
+    margin: unset;
+    padding: unset;
+    width: 100%;
+    height: auto;
 }
 
-/*Hot tip*/
-.hottip-head {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    background-color: #FF5B8F;
+.row {
+    margin: unset!important;
 }
 
-/*Search bar*/
-.horny {
-    background: url('../hornyIMGS/horny.png') no-repeat -9px -3px;
-    width: 156px;
-    height: 60px;
-}
-.fa-search:before{
-    font-size: 22px;
-    line-height: 1.8;
-    
+.unset-padding {
+    padding: unset!important;
 }
 
-.search-icon {
+.margin-top{
+    margin-top: 25px!important;
+}
+/*Header*/
+#header{
+    display: block;
+    margin: unset;
+    padding: 0 55px;
+    width: inherit;
+    height: auto;
+
     background-color: black;
+    font-weight: bold;
+    line-height: 16px;
     color: white;
-    font-weight: 500;
+}
+
+#header .row{
+    padding: 1% 0;
+}
+
+
+    #header .row .right-margin {
+        margin-right: 25px;
+    }
+
+/*Body*/
+#body-part{
+    display: block;
+    margin: unset;
+    padding: 0 55px;
+    width: 100%;
+    height: auto;
 
 }
+
+/*Hot title*/
+#hot-title {
+    padding: 1.4% 0;
+    background-color: #FF5B8F;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#hot-title .col-md-9{
+    padding: 0 22px;
+}
+
+    #hot-title .col-md-3 {
+        padding: 0 22px;
+    }
+
+#contact {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#number {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+
+
 button,input{
     font-size: 15px!important;
     color: black;
     border: none;
 
 }
-/*Menu*/
-.menu {
-    font-weight: 700;
-    padding: 0px 31px;
-    font-size: 14px;
+
+
+/*Search*/
+
+#search{
+    margin: 3% 0!important;
+
+}
+#search-wrap {
+    padding: 0;
 }
 
-/*Slide*/
-.slide {
-    background: url('../hornyIMGS/slide.png') no-repeat 0 0;
-    width: 1170px;
-    height: 493px;
+#search-row {
+    margin-right: 20% !important;
+    width: 100%;
+    border: black 1px solid;
+    border-radius: 5px;
+}
+
+#search-space {
+    padding: 10px;
+}
+
+
+/*Menu*/
+
+#menu {
+    margin: 1% 0 2% 0;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+#menu .item{
+    margin: 0 2%;
 }
 
 /*Policy*/
@@ -100,10 +165,10 @@ button,input{
     height: 63px;
 }
 
-.policy{
-    padding: 20px 20px 0px 20px;
+#policy{
+    margin: 3% 0!important;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .policy-icon-size{
@@ -118,19 +183,30 @@ button,input{
 }
 
 .policy-img-wrap{
-    height: 63px;
+    height: 65%;
+    margin-bottom: 5%;
 }
 .col-pad{
     padding: 0px 40px;
 }
 
 /*New products*/
+#newproducts {
+    display: block;
+    margin: unset;
+    padding: unset;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+}
 .newpro-head {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    margin-bottom:3%!important;
+    padding-top: 18px;
+    padding-bottom: 18px;
     background-color: black;
     color: white;
     font-size: 15px;
+    
 }
 
 button{
@@ -155,12 +231,12 @@ button{
 
 .productname{
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .hint{
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -195,7 +271,23 @@ button{
     background-color: white;
     font-size: 15px!important;
 }
+/*Sale advertisement*/
+#saleads{
+    display: block;
+    margin-top: 45px!important;
+    padding:unset;
+    width: 100%;
+    height: auto;
+}
 
+/*On sale and cart*/
+#onsale-cat{
+    display: block;
+    margin-top: 35px;
+    padding: unset;
+    width: 100%;
+    height: auto;
+}
 /*On sale products*/
 .onsale-head{
     font-size: 22px;
@@ -225,42 +317,117 @@ button{
 }
 
 /*Shop by category*/
+#category-head {
+    margin-top: 45px!important;
+
+}
+#first-row {
+    margin-top: 25px!important;
+}
+#second-row {
+    margin-top: 25px!important;
+}
 .catproname{
     margin-top: 10px;
     font-size: 15px;
     font-weight: 700;
 }
 
-/*Customer sayings*/
+.product-wrap {
+    margin: unset;
+    padding: unset;
+    width: 96%;
+    height: 100%;
+}
 
+/*Store in store*/
+#storeinstore{
+    display: block;
+    margin-top: 45px;
+    padding: unset;
+    width: 100%;
+    height: auto;
+
+}
+
+#storeinstore .grey-square{
+    margin: unset;
+    padding: unset;
+    width: 96%;
+    height: auto;
+}
+
+.margin-left{
+    margin-left: 1.3%!important;
+}
+
+.margin-right{
+    margin-right: 1.3%!important;
+}
+/*Customer sayings*/
+#customersaying {
+    display: block;
+    margin-top: 45px;
+    padding: unset;
+    width: 100%;
+    height: auto;
+}
+
+#customersaying-headline{
+    margin-top: 45px;
+    font-size: 30px;
+}
 .said{
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 17px;
     font-weight:400;
     font-style:italic;
 }
 
-#cussconr button{
+.customer-margin-left{
+    margin-left: 3%!important;
+}
+
+.customer-margin-right{
+    margin-right: 3%!important;
+}
+#customersaying button{
     background-color: white;
     color: black;
     font-weight: 700;
 }
 
 /*Featured and brands*/
+#featuredbrands{
+    display: block;
+    margin: 8% 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
 .featured-brands{
     font-size: 23px;
 
 }
 
 /*Footer*/
+
+#footer {
+    display: block;
+    margin-top: 8% 0;
+    padding: 8% 4%;
+    border-top: #80808057 1.5px solid;
+    width: 100%;
+    height: auto;
+}
 .footer-head{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .footer-content{
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2;
 }
