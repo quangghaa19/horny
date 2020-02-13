@@ -11,7 +11,9 @@
                 // chay xong lenh nay khi click vao nut ta lay dc vitrislide
             }
             for (var i = 0; i < slides.length; i++) {
+
                 slides[i].classList.remove('ra');
+
             }
             for (var i = 0; i < slides.length; i++) {
                 slides[vitrislide].classList.add('ra');
@@ -28,11 +30,14 @@
             for (var i = 0; slide = slide.previousElementSibling; vitrislide++) {
             }
             for (var i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('ra'); // remove hết những thằng đang có class 'ra'
+                
+                 slides[i].classList.remove('ra'); // remove hết những thằng đang có class 'ra'
+                
             }
             if (vitrislide == slides.length - 1) {
                 slides[0].classList.add('ra');
                 // Thằng này có nghĩa là sau khi tự động chuyển đến slide cuối cùng nó quay lại thằng 0
+                //slides[0].classList.add('show');
             }
             else {
                 slides[vitrislide].nextElementSibling.classList.add('ra');
@@ -40,7 +45,7 @@
             }
         }, 2000)
         // Tu dong chuyen slide
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             nut[i].addEventListener('click', function () {
                 clearInterval(thoigian);
                 //Click vào một nút bất kì dừng auto chuyển slide
