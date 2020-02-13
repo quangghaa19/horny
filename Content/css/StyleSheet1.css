@@ -25,21 +25,19 @@
 }
 /*Header*/
 #header{
-    display: block;
-    margin: unset;
-    padding: 0 55px;
-    width: inherit;
-    height: auto;
-
-    background-color: black;
-    font-weight: bold;
-    line-height: 16px;
-    color: white;
+    
 }
 
-#header .row{
-    padding: 1% 0;
-}
+    #header .row {
+        
+        padding: 1em 3.5em;
+        width: 100%;
+        height: auto;
+        background-color: black;
+        font-weight: bold;
+        line-height: 16px;
+        color: white;
+    }
 
 
     #header .row .right-margin {
@@ -63,6 +61,7 @@
     color: white;
     font-size: 22px;
     font-weight: 500;
+    display: none;
 }
 
 #hot-title .col-md-9{
@@ -128,6 +127,9 @@ button,input{
     margin: 0 2%;
 }
 
+/*Slide*/
+
+
 /*Policy*/
 .p-one {
     background: url('../hornyIMGS/p1.png') no-repeat 0 0;
@@ -183,7 +185,7 @@ button,input{
 }
 
 .policy-img-wrap{
-    height: 65%;
+    height: 65px;
     margin-bottom: 5%;
 }
 .col-pad{

@@ -18,15 +18,19 @@
 
     <!-- Link file css -->
     <link href="../css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../css/horny-mobile.css" rel="stylesheet" />
+    <link href="../css/slide.css" rel="stylesheet" />
 
     <!-- Link icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Boostrap 4 library -->
     <link href="../boostrap4/bootstrap.min.css" rel="stylesheet" />
-    <script src="../boostrap4/jquery.min.js"></script>
+    <!--<script src="../boostrap4/jquery.min.js"></script>
     <script src="../boostrap4/popper.min.js"></script>
-    <script src="../boostrap4/bootstrap.min.js"></script>
+    <script src="../boostrap4/bootstrap.min.js"></script>-->
+
 
 </head>
 <body>
@@ -36,7 +40,6 @@
         <!-- Page Header -->
         <div id="header">
 
-            <!--<div class="container">-->
 
             <div class="row">
                 <!-- Left content -->
@@ -78,7 +81,7 @@
 
                     <div class="right-margin">
 
-                        <i class="far fa-question-circle" style="margin-right"></i>
+                        <i class="far fa-question-circle"></i>
                         Help
 
 
@@ -94,8 +97,21 @@
                 <!-- end -->
             </div>
 
-            <!--</div>-->
 
+            <!-- Mobile -->
+            <div class="mb-header row unset-padding" style="display:none">
+                <div class="col-3 d-flex align-items-center">
+                    <div class="mb-menu"><i class="fas fa-bars"></i></div>
+                    <div class="mb-contact" style="margin-left: 1em"><i class="fas fa-phone"></i></div>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <img src="../hornyIMGS/horny.png" style="width: 100%" alt="horny" />
+                </div>
+                <div class="col-3 d-flex justify-content-end align-items-center">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- end -->
 
         </div>
         <!-- end -->
@@ -103,164 +119,242 @@
         <div id="body-part">
             <!-- Main parts -->
             <!--<div class="container">-->
-                <!-- Hot tip-->
-                <div id="hot-title" class="row">
+            <!-- Hot title-->
+            <div id="hot-title" class="row">
 
-                    <!-- Left content -->
-                    <div class="col-md-9 d-md-flex align-items-md-center">
-                        INSIDER DEALS HURRY COUNTING DOWN TO SEPTEMBER SALES. UP TO 80% OFF
-                    </div>
-                    <!-- end -->
-                    <!-- Right content -->
-                    <div class="col-md-3 d-md-flex align-items-md-center justify-content-md-end">
+                <!-- Left content -->
+                <div class="col-md-9 d-md-flex align-items-md-center">
+                    INSIDER DEALS HURRY COUNTING DOWN TO SEPTEMBER SALES. UP TO 80% OFF
+                </div>
+                <!-- end -->
+                <!-- Right content -->
+                <div class="col-md-3 d-md-flex align-items-md-center justify-content-md-end">
 
-                        SHOP NOW<i class="fas fa-arrow-right" style="padding-left: 12px"></i>
-
-                    </div>
-                    <!-- end -->
+                    SHOP NOW<i class="fas fa-arrow-right" style="padding-left: 12px"></i>
 
                 </div>
                 <!-- end -->
-                <!-- Logo, search bar and contact info -->
-                <!-- Logo + search + contact info row -->
-                <div id="search" class="row">
 
-                    <!-- Logo -->
-                    <div class="col-md-3 unset-padding">
+            </div>
+            <!-- end -->
+            <!-- Logo, search bar and contact info -->
+            <!-- Logo + search + contact info row -->
+            <div id="search" class="row">
 
-                        <img src="../hornyIMGS/horny.png" style="margin-left: -9px; width: auto" alt="horny" />
+                <!-- Logo -->
+                <div id="horny-logo" class="col-md-3 unset-padding">
 
+                    <img src="../hornyIMGS/horny.png" style="margin-left: -9px; width: auto" alt="horny" />
+
+                </div>
+                <!-- end -->
+                <!-- Search bar -->
+
+                <div id="search-wrap" class="col-md-6 d-md-flex align-items-md-center" style="padding: 0">
+
+                    <div id="search-row" class="row">
+                        <div id="search-space" class="col-md-10">
+                            <input class="type=" text" name="search" value="" placeholder="Search entire store here..." />
+                        </div>
+
+                        <button id="search-icon" title="searching..." type="button" class="col-md-2">
+                            <i class="fas fa-search" style="font-size:22px"></i>
+                        </button>
                     </div>
-                    <!-- end -->
-                    <!-- Search bar -->
-                    
-                    <div id="search-wrap" class="col-md-6 d-md-flex align-items-md-center" style="padding: 0">
+                </div>
 
-                        <div id="search-row" class="row">
-                            <div id="search-space" class="col-md-10">
-                                <input class="type=" text" name="search" value="" size="" placeholder="Search entire store here..." />
-                            </div>
+                <!-- end -->
+                <!-- Contact info -->
+                <div id="contact-info" class="col-md-3 unset-padding">
 
-                            <button id="search-icon" title="searching..." type="button" class="col-md-2">
-                                <i class="fas fa-search" style="font-size:22px"></i>
-                            </button>
+                    <div>
+                        <div id="contact" class="d-md-flex justify-content-md-end">
+                            CALL / SMS / Whatsapp
+                        </div>
+                        <div id="number" class="d-md-flex justify-content-md-end">
+                            +65 9777 2176
                         </div>
                     </div>
 
-                    <!-- end -->
-                    <!-- Contact info -->
-                    <div class="col-md-3 unset-padding">
-
-                        <div>
-                            <div id="contact" class="d-md-flex justify-content-md-end">
-                                CALL / SMS / Whatsapp
-                            </div>
-                            <div id="number" class="d-md-flex justify-content-md-end">
-                                +65 9777 2176
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- end -->
-
                 </div>
                 <!-- end -->
-                <!-- Menu-classify products row -->
-                <div id="menu" class="d-md-flex justify-content-md-center">
 
-                    <div class="item d-md-flex align-items-md-center">
-                        MEN
-                    </div>
+            </div>
 
-                    <div class="item d-md-flex align-items-md-center">
-                        WOMEN
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        LUBE, BETTER, SEX
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        ANAL
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        SM FETISH
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        LINGERY
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        PARTY
-                    </div>
-
-                    <div class="item d-md-flex align-items-md-center">
-                        SALES
-                    </div>
-                </div>
-                <!-- end -->
-                <!-- Slidebar -->
+            <!-- Mobile search tool-->
+            <div id="mb-search-tool" style="display: none">
                 <div class="row">
+                    <div id="mb-search-space" class="col-11">
+                        <input type="text" name="search" value="" placeholder="Search entire store here..." />
+                    </div>
 
+                    <button id="mb-search-icon" title="searching..." type="button" class="col-1">
+                        <i class="fas fa-search" style=""></i>
+                    </button>
+                </div>
+            </div>
+            <!-- end -->
+            <!-- Menu-classify products row -->
+            <div id="menu" class="d-md-flex justify-content-md-center">
+
+                <div class="item d-md-flex align-items-md-center">
+                    MEN
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    WOMEN
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    LUBE, BETTER, SEX
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    ANAL
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    SM FETISH
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    LINGERY
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    PARTY
+                </div>
+
+                <div class="item d-md-flex align-items-md-center">
+                    SALES
+                </div>
+            </div>
+            <!-- end -->
+            <!-- Slidebar -->
+            <!--<div id="slide" class="row">-->
+            <!--<img src="../hornyIMGS/slide.png" style="width: 100%" alt="sexy" />-->
+            
+            <div class="wraper">
+                <div class="slide">
+                    <div class="slide_0 ra">
+
+                    </div>
+                    <div class="slide_1">
+
+                    </div>
+                    <div class="slide_2">
+
+                    </div>
+                    <div class="slide_3">
+
+                    </div>
+                </div>
+                <div class="nut">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!--</div>-->
+            <!-- Mobile slide -->
+            <div id="mb-slide" class="row">
+                <div class="img-wrap" style="display:none">
                     <img src="../hornyIMGS/slide.png" style="width: 100%" alt="sexy" />
-                    <!--<div class="col-md slide"></div>-->
+                </div>
+            </div>
+            <!-- end -->
+            <!-- Mobile menu -->
+            <div id="mb-menu" style="display:none">
+                <div class="content text-center">NEW ARRIVALS</div>
+                <div class="content text-center">BEST SELLERS</div>
+                <div class="content text-center">WEEKLY SPECIAL</div>
+                <div class="content text-center">HORNY'S SPECIAL EXCLUSIVE</div>
+                <div class="content text-center">TOYS GUIDE</div>
+
+            </div>
+
+            <!-- Why buy from us -->
+            <div id="why" class="row" style="display: none">
+                <div id="register" class="col-6">
+                    <div class="content">
+                        <div class="img"></div>
+                        <div class="title text-center">EARN REWARD POINTS</div>
+                        <div class="note text-center">Cash rebate for next purchase</div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" title="register">Register</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="signin" class="col-6">
+
+                    <div class="content">
+                        <div class="img"></div>
+                        <div class="title text-center">ALREADY A MEMBER?</div>
+                        <div class="note text-center">Sign in for a better exprience</div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" title="sign in">Sign in</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- Policy -->
+
+            <div id="policy" class="row">
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-one"></div>
+                    </div>
+                    <div class="text-md-center">10% CASH BACK</div>
                 </div>
 
-                <!-- end -->
-                <!-- Policy -->
-
-                <div id="policy" class="row">
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-one"></div>
-                        </div>
-                        <div class="text-md-center">10% CASH BACK</div>
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-two"></div>
                     </div>
-
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-two"></div>
-                        </div>
-                        <div class="text-md-center">GLOBAL DEALS</div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-three"></div>
-                        </div>
-                        <div class="text-md-center">MEN'S SALE</div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-four"></div>
-                        </div>
-                        <div class="text-md-center">SHOPEE MART</div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-five"></div>
-                        </div>
-                        <div class="text-md-center">DINING & TRAVEL DEAS</div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
-                            <div class="p-six"></div>
-                        </div>
-                        <div class="text-md-center">LOWEST PRICE GUARANTEED</div>
-                    </div>
+                    <div class="text-md-center">GLOBAL DEALS</div>
                 </div>
 
-                <!-- end -->
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-three"></div>
+                    </div>
+                    <div class="text-md-center">MEN'S SALE</div>
+                </div>
 
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-four"></div>
+                    </div>
+                    <div class="text-md-center">SHOPEE MART</div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-five"></div>
+                    </div>
+                    <div class="text-md-center">DINING & TRAVEL DEAS</div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="policy-img-wrap d-md-flex justify-content-md-center align-items-md-end">
+                        <div class="p-six"></div>
+                    </div>
+                    <div class="text-md-center">LOWEST PRICE GUARANTEED</div>
+                </div>
+            </div>
+
+            <!-- end -->
             <!--</div>-->
             <!-- end -->
             <!-- New products -->
-            <div id="newproducts" >
+            <div id="newproducts">
 
                 <!-- Head -->
                 <div class="row newpro-head">
@@ -694,7 +788,7 @@
                                     </div>
 
                                 </div>
-                                
+
 
                             </div>
                             <!-- end -->
@@ -712,7 +806,7 @@
                                     </div>
 
                                 </div>
-                                
+
 
                             </div>
                             <!-- end -->
@@ -730,7 +824,7 @@
                                     </div>
 
                                 </div>
-                                
+
                             </div>
                             <!-- end -->
 
@@ -753,7 +847,7 @@
                                     </div>
 
                                 </div>
-                                
+
 
                             </div>
                             <!-- end -->
@@ -772,7 +866,7 @@
 
 
                                 </div>
-                                
+
                             </div>
                             <!-- end -->
                             <!-- Product 3 -->
@@ -790,7 +884,7 @@
 
 
                                 </div>
-                                
+
                             </div>
                             <!-- end -->
 
@@ -812,7 +906,7 @@
                             <!-- end -->
 
                         </div>
-                        
+
 
                     </div>
                     <!-- end -->
@@ -837,7 +931,7 @@
                         <div class="grey-square">
                             <img src="../hornyIMGS/stinst.png" style="width: 100%" alt="solid grey square" />
                         </div>
-                        
+
                     </div>
 
                     <div class="col-md-3 unset-padding ">
@@ -864,7 +958,7 @@
             <!-- end -->
             <!-- What customers are saying -->
             <div id="customersaying">
-                <div id="customersaying-headline" class="row" >
+                <div id="customersaying-headline" class="row">
                     <div class="col-md onsale-head align-middle text-md-center">
                         <div>WHAT CUSTOMER ARE SAYING</div>
                         <i class="onsale-icon fa-grip-lines"></i>
@@ -879,7 +973,7 @@
                         <div class="grey-square">
                             <!-- Product image -->
                             <div>
-                                <img src="../hornyIMGS/cus1.png" style="width:auto" alt="CBX" />
+                                <img src="../hornyIMGS/cus1.png" style="width:100%" alt="CBX" />
                             </div>
                             <!-- end -->
                             <!-- Product name -->
@@ -902,7 +996,7 @@
 
                             <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
                         </div>
-                        
+
                     </div>
                     <!-- end -->
                     <!-- Customer saying product 2 -->
@@ -911,7 +1005,7 @@
                         <div class="grey-square customer-margin-left">
                             <!-- Product image -->
                             <div>
-                                <img src="../hornyIMGS/cus2.png" style="width:auto" alt="bucked" />
+                                <img src="../hornyIMGS/cus2.png" style="width:100%" alt="bucked" />
                             </div>
                             <!-- end -->
                             <!-- Product name -->
@@ -934,7 +1028,7 @@
 
                             <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left:5px"></i></button>
                         </div>
-                        
+
                     </div>
                     <!-- end -->
                     <!-- Customer saying product 3 -->
@@ -944,7 +1038,7 @@
 
                             <!-- Product image -->
                             <div>
-                                <img src="../hornyIMGS/cus3.png" style="width:auto" alt="skinception" />
+                                <img src="../hornyIMGS/cus3.png" style="width:100%" alt="skinception" />
                             </div>
                             <!-- end -->
                             <!-- Product name -->
@@ -968,7 +1062,7 @@
                             <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
 
                         </div>
-                        
+
 
                     </div>
                     <!-- end -->
@@ -979,7 +1073,7 @@
 
                             <!-- Product image -->
                             <div>
-                                <img src="../hornyIMGS/cus1.png" style="width:auto" alt="moxie by we-vibe" />
+                                <img src="../hornyIMGS/cus1.png" style="width:100%" alt="moxie by we-vibe" />
                             </div>
                             <!-- end -->
                             <!-- Product name -->
@@ -1003,7 +1097,7 @@
                             <button type="button" style="margin-top: 10px">Read more <i class="fas fa-arrow-right" style="margin-left: 5px"></i></button>
 
                         </div>
-                        
+
                     </div>
                     <!-- end -->
 
@@ -1049,6 +1143,51 @@
                 </div>
             </div>
             <!-- end -->
+            <!-- Mobile popular cat -->
+            <div id="popular-cat" style="display:none">
+                <div class="headline text-center">POPULAR CATEGORIES</div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat1.png" style="max-width: 100%" alt="pop-1" />
+                        </div>
+                        <div class="name text-center">FEMALE TOYS</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat2.png" style="max-width: 100%" alt="pop-2" />
+                        </div>
+                        <div class="name text-center">MALE TOYS</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat3.png" style="max-width: 100%" alt="pop-3" />
+                        </div>
+                        <div class="name text-center">COUPLE TOYS</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat4.png" style="max-width: 100%" alt="pop-4" />
+                        </div>
+                        <div class="name text-center">DILDOLS</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat5.png" style="max-width: 100%" alt="pop-5" />
+                        </div>
+                        <div class="name text-center">ESSENTIALS</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="pop-img-wrap">
+                            <img src="../hornyIMGS/cat6.png" style="max-width: 100%" alt="pop-6" />
+                        </div>
+                        <div class="name text-center">BONDAGE</div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <!-- end -->
@@ -1182,8 +1321,73 @@
             <!--</div>-->
         </div>
         <!-- end -->
+
+        <!-- Mobile footer -->
+        <div id="mb-footer" style="display: none">
+
+            <div id="mb-policy-wrap">
+                <div class="mb-policy border-top">
+                    <div class="content d-flex justify-content-between">
+                        <div class="text">CUSTOMER CARE</div>
+                        <div class="icon"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="mb-policy">
+                    <div class="content d-flex justify-content-between">
+                        <div class="text">FAQ</div>
+                        <div class="icon"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="mb-policy">
+                    <div class="content d-flex justify-content-between">
+                        <div class="text">DELIVERY INFO</div>
+                        <div class="icon"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="mb-policy">
+                    <div class="content d-flex justify-content-between">
+                        <div class="text">GUIDE PAGES</div>
+                        <div class="icon"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="mb-policy border-bottom">
+                    <div class="content d-flex justify-content-between">
+                        <div class="text">PAYMENT OPTION</div>
+                        <div class="icon"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Mobile sign-up now -->
+            <div class="headline text-center">SIGN UP NOW</div>
+
+            <div class="content">Exclusive promotions, latest news and products</div>
+
+            <div class="row">
+                <div class="col-10">
+                    <input type="text" name="email" value="" placeholder="Enter your email here..."/>
+                </div>
+                <div class="col-2 unset-padding d-flex align-items-center">
+                    <button class="button" title="Submit" type="button">Submit</button>
+                </div>
+            </div>
+
+            <div class="copyright">Copyright C2019 products. All rights reserved.</div>
+
+            <div class="img-wrap d-flex justify-content-center">
+                <img src="../hornyIMGS/connect-icon.png" style="width: auto" alt="facebook"/>
+            </div>
+        </div>
+
     </div>
     <!-- end -->
 
+    <script src="../javascripts/JavaScript.js"></script>
 </body>
 </html>
