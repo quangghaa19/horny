@@ -1,0 +1,248 @@
+﻿@media only screen and (max-width: 600px){
+
+    body{
+        
+    }
+
+    /*Header*/
+    #header{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #header .row{
+        display: none;
+        color: black;
+    }
+
+    #header .mb-header{
+        display: flex!important;
+        background-color: aliceblue;
+    }
+
+    /*Body part*/
+
+    #body-part{
+        margin: unset;
+        padding: unset;
+    }
+    /*Hot title*/
+    #hot-title{
+        display: none;
+    }
+
+    /*Search tool*/
+    #search{
+        display: none;
+    }
+
+    #mb-search-tool{
+        display: block!important;
+        margin: unset;
+        padding: unset;
+        width: 100%;
+    }
+
+    #mb-search-tool .row{
+        
+        border: 0.5px black solid;
+
+    }
+
+    #mb-search-tool .row .mb-search-space{
+
+    }
+
+    #mb-search-tool .row .mb-search-icon{
+        color: white;
+        background-color: black;
+    }
+
+    #mb-search-tool button{
+        padding: unset;
+
+    }
+
+    /*Slide*/
+    #slides{
+        display: none;
+    }
+
+    .img-wrap{
+        display: block!important;
+        padding: 5px;
+    }
+
+    /*Menu*/
+    #menu{
+        display: none;
+
+    }
+
+    #mb-menu {
+        display: block !important;
+        font-size: 15px;
+        color: #00000087;
+        padding: unset;
+        margin: 5px 15px;
+    }
+
+        #mb-menu .content {
+            line-height: 2;
+            border-bottom: 1px double #00000021;
+        }
+
+    /*Why buy from us*/
+    #why{
+
+    }
+
+        #why .content {
+            background-color: #00000021;
+            height: inherit;
+        }
+
+    #why .content .title{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.5;
+        height: 3em;
+    }
+
+    #why .content .note{
+        margin-top: 1em;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    #register button{
+        margin-top: 1em;
+        color: black;
+        background-color: aliceblue;
+        
+    }
+
+    #signin button{
+        margin-top: 1em;
+        color: white;
+        background-color: black;
+    }
+
+    /*Policy newproduct saleads onsale-cat store-in-store customer-saying featuredandbrands*/
+
+    #policy{
+        display: none;
+    }
+
+    #newproducts{
+        display: none;
+    }
+
+    #saleads{
+        display: none;
+    }
+
+    #onsale-cat{
+        display: none;
+    }
+
+    #storeinstore{
+        display: none;
+    }
+
+    #customersaying{
+        display: none;
+    }
+
+    #featuredbrands{
+        display: none;
+    }
+
+    /*popular cat*/
+
+    #popular-cat{
+        display: block!important;
+    }
+
+        #popular-cat .headline {
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: 700;
+           
+        }
+    #popular-cat .row{
+        margin: 10px 0!important;
+    }
+
+        .name{
+            font-size: 13px;
+        }
+
+    /*Footer*/
+    #footer{
+        display: none;
+    }
+
+    #mb-footer{
+        display: block!important;
+        padding: 0 15px!important;
+        font-size: 15px;
+    }
+
+    #mb-footer #mb-policy-wrap{
+        margin: 15px 0;
+    }
+    #mb-policy-wrap .mb-policy {
+        line-height: 2;
+        border-bottom: 1px double #00000021;
+    }
+
+    #mb-policy-wrap .border-top {
+        border-top: 1px double #00000021;
+    }
+
+    #mb-policy-wrap .border-bottom {
+        border-bottom: 1px double #00000021;
+    }
+
+    /*below footer*/
+    #mb-footer .headline{
+        margin-top: 2em 0em 1em 0em;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #mb-footer .content{
+        margin: 1em 0em 0em 0em;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    #mb-footer .row{
+        border: 0.5px solid black;
+        width: 100%;
+        height: auto;
+    }
+
+    #mb-footer .row .col-10{
+        padding: 0.5em 0.5em;
+    }
+
+    #mb-footer .row .col-2{
+        height: inherit;
+        background-color: black;
+    }
+    #mb-footer .row .col-2 button{
+        background-color: black;
+        color: white;
+        height: 100%!important;
+    }
+
+    #mb-footer .copyright{
+        font-weight: 400;
+        font-size: 13px;
+
+    }
+}
