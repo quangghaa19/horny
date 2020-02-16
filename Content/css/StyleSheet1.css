@@ -105,8 +105,7 @@ button,input{
 #search-row {
     margin-right: 20% !important;
     width: 100%;
-    border: black 1px solid;
-    border-radius: 5px;
+    
 }
 
 #search-space {
