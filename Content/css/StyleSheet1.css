@@ -29,16 +29,27 @@
 }
 
     #header .row {
-        
         padding: 1em 3.5em;
         width: 100%;
         height: auto;
         background-color: black;
-        font-weight: bold;
-        line-height: 16px;
+        font-weight: bold!important;
+        line-height: 16px!important;
+        font-size: 16px!important;
         color: white;
     }
 
+    .btn-wrap{
+        margin: unset;
+        padding: unset;
+        width: auto;
+        height: auto;
+    }
+
+    button{
+        font-weight: 700;
+        padding: 5px 2px;
+    }
 
     #header .row .right-margin {
         margin-right: 25px;
@@ -126,6 +137,11 @@ button,input{
     margin: 0 2%;
 }
 
+#menu .item button{
+    color: black;
+    background-color: white;
+
+}
 /*Slide*/
 
 
@@ -210,9 +226,29 @@ button,input{
     
 }
 
+    .newpro-head .left-content-1 {
+        margin: unset;
+        padding: unset;
+        width: auto;
+        height: auto;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .newpro-head .left-content-2{
+        margin-left: 20%;
+        padding: unset;
+        width:auto;
+        height: auto;
+        
+    }
 button{
     color: white;
     background-color: black;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .addtocart {
@@ -299,11 +335,13 @@ button{
     font-size: 22px;
 }
 
-.clock {
+
+.clock-wrap {
     margin-left: 20px;
     font-size: 22px;
     font-weight: 700;
 }
+
 .time {
     width: 45px;
     height: 45px;
@@ -317,6 +355,14 @@ button{
     padding-top: 2px;
 }
 
+.timeout{
+    margin-left: 3em;
+    padding: unset;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    background-color: lightgrey;
+}
 /*Shop by category*/
 #category-head {
     margin-top: 45px!important;
@@ -339,6 +385,14 @@ button{
     padding: unset;
     width: 96%;
     height: 100%;
+}
+
+.product-wrap button{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    background-color: white;
 }
 
 /*Store in store*/
