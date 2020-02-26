@@ -3,7 +3,9 @@
 }
 
 /*Page*/
-
+.display-none{
+    display: none!important;
+}
 #page{
     display: block;
     margin: unset;
@@ -104,6 +106,11 @@ button,input{
 
 
 /*Search*/
+#search-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 #search{
     margin: 3% 0!important;

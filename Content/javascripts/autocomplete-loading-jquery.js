@@ -1,6 +1,7 @@
 $(document).ready(function(){
 //Initiate when ajax called
   $(document).ajaxStart(function(){
+    $("#search-icon").addClass("display-none");
     $("#wait").css("display", "block");
   });
 
@@ -8,74 +9,53 @@ $(document).ready(function(){
   $(document).ajaxComplete(function(){
 	setTimeout(function(){
   		$("#wait").css("display", "none");
+      $("#search-icon").removeClass("display-none");
   	}, 550) 
   });
-//Call ajax
-	/*$("#tags").keydown(function(){
-		var myData = getJSONData();
-    		$( "#tags" ).autocomplete({
-      		source: myData
-    	});
- 	});*/
 
-  //Debounce function
-function debounce(func, wait) {
-  var timeout;
-  return function() {
-    var context = this,
-        args = arguments;
+/*anh MAX
+  $(“#tags”).keydown (function (e) {
+    console.log ($(this).val()+String.fromCharCode(e.which).toLowerCase());
+  });
 
-    var executeFunction = function() {
-      func.apply(context, args);
+*/
+
+  $('#tags').keydown (function (e) {
+    //String with spaces
+    var val = $(this).val()+String.fromCharCode(e.which).toLowerCase();
+    console.log(val);
+    console.log(val.length);
+    //Remove spaces start and end if e.which not BACKSPACE
+    var trim = val.trim();
+    console.log(trim);
+    console.log(trim.length);
+    //Remove spaces at the end if e.which is BACKSPACE
+    var b="";
+    for(let i=0; i<trim.length; i++) if(trim.charCodeAt(i)>32&&trim.charCodeAt(i)<127) b+=trim.charAt(i);
+
+    console.log(b);
+    console.log((e.which==8)||(e.which>32 && e.which<127));
+    console.log(b.length>2);
+    //Search and loading spinner if input val length > 2
+    if( (e.which==8)||(e.which>32 && e.which<127) && b.length>2 ){
+      var myDataObj=getJSONData();
+        $("#tags").autocomplete({
+          source: myDataObj
+        });
     }
+  });
 
-    clearTimeout(timeout);
-    timeout = setTimeout(executeFunction, wait);
-  }
-}
-
-var handleKeypressDelay = debounce(function(){
-  
-  var inVal = $("#tags").val();
-  console.log(inVal);
-  console.log(typeof inVal);
-  console.log(inVal.length);
-  console.log($( "#tags" ).length > 0);
-  console.log(inVal.length > 2);
-  //if( ($( "#tags" ).length > 0) && ( inVal.length > 2 )) {
-   var myData = getJSONData();
-    $( "#tags" ).autocomplete({
-      source: myData
-    });
-   // myData = [];
-  //}
-
-}, 550);
-
-//Using debounce funtion
-  $('#tags').keypress( handleKeypressDelay );
-
-
-
-// keypress length
-/*$('#input').keydown( function(e) {
-
-    if( $(this).length === 8 ) { alert('We have a winner!'); }
-    else { return false; }
-
-});*/
 //Get JSON data
 function getJSONData(){
-	var items = [];
+	var items=[];
     $.ajax({
        url: 'demo.json',
        dataType: 'json',
        success: function(data) {
-          console.log(data);
           $.each(data, function(key, val) {
             items.push(val);    
           });
-          //console.log(items);
+          console.log(items);
           
        },
       statusCode: {

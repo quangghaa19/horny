@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<input id="tags" type="text" name="">
+	<script type="text/javascript">
+	$('#tags').keydown (function (e) {
+    console.log ($(this).val()+String.fromCharCode(e.which).toLowerCase());
+  });
+</script>
+</body>
+</html>
