@@ -14,8 +14,14 @@ class Model
     {
         // If not connect   ===> connect
         if (!$this->__conn){
-            $this->__conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME) or die ('Lỗi kết nối');
-            mysqli_query($this->__conn, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
+
+            try {
+                $this->__conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                mysqli_query($this->__conn, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
+            } catch (mysqli_sql_exception $e) {
+                $e->getMessage();
+            }
+            
         }
     }
  
@@ -69,21 +75,14 @@ class Model
     {
         
         $this->connect();
-     
-        $result = mysqli_query($this->__conn, $sql);
-     
-        if (!$result){
-            die ('Câu truy vấn bị sai');
+        try {
+            $result = mysqli_query($this->__conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            mysqli_free_result($result);
+            if( $row ) return $row;
+        } catch (Exception $e) {
+            $e->getMessage();
         }
-     
-        $row = mysqli_fetch_assoc($result);
-     
-        mysqli_free_result($result);
-     
-        if ($row){
-            return $row;
-        }
-     
         return false;
     }
      

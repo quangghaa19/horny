@@ -41,15 +41,11 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `created`, `modified`) VALUES
 (1, 'changed abc', 't51', 5, '2015-08-02 12:04:03', '2020-03-05 17:14:41'),
-(3, 'Gatorade', 'This is a very good drink for athletes.', 1.99, '2015-08-02 12:14:29', '2015-08-05 23:59:18'),
-(4, 'Eye Glasses', 'It will make you read better.', 6, '2015-08-02 12:15:04', '2015-08-05 23:59:18'),
-(5, 'Trash Can', 'It will help you maintain cleanliness.', 3.95, '2015-08-02 12:16:08', '2015-08-05 23:59:18'),
-(6, 'Mouse', 'Very useful if you love your computer.', 11.35, '2015-08-02 12:17:58', '2015-08-05 23:59:18'),
-(8, 'Pillow', 'Sleeping well is important.', 8.99, '2015-08-02 12:18:56', '2015-08-05 23:59:18'),
-(11, 'Thao', 'suyt deo trai', 88.88, '2020-02-26 11:49:17', '2020-02-26 10:49:17'),
-(12, 'Duong A+', 'dep trai nhat Ha Noi', 89.98, '2020-02-26 13:43:21', '2020-02-26 23:39:32'),
-(13, 'ha rat dep trai', '', 999, '0000-00-00 00:00:00', '2020-03-06 04:14:23'),
-(14, 'Thao', 'nghi hoc', 98, '0000-00-00 00:00:00', '2020-03-06 04:34:13');
+(2, 'Gatorade', 'This is a very good drink for athletes.', 1.99, '2015-08-02 12:14:29', '2015-08-05 23:59:18'),
+(3, 'Eye Glasses', 'It will make you read better.', 6, '2015-08-02 12:15:04', '2015-08-05 23:59:18'),
+(4, 'Trash Can', 'It will help you maintain cleanliness.', 3.95, '2015-08-02 12:16:08', '2015-08-05 23:59:18'),
+(5, 'Mouse', 'Very useful if you love your computer.', 11.35, '2015-08-02 12:17:58', '2015-08-05 23:59:18'),
+(6, 'Pillow', 'Sleeping well is important.', 8.99, '2015-08-02 12:18:56', '2015-08-05 23:59:18');
 
 --
 -- Indexes for dumped tables

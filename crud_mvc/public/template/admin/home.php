@@ -15,19 +15,20 @@
 	</style>
 </head>
 <body>
+	<!-- Update message -->
+	
+	<!-- Delete message -->
+	<?php 
+	// Delete message prompt will be here
+		$action = isset($_GET['a']) ? $_GET['a'] : "";
+		// If it was redirected from delete.php
+		if( $action=='delete' ){
+			echo "<div class='alert alert-success'>Record was deleted.</div>";
+	} ?>
 	
 	<!-- container -->
 	<div class="container">
-		<?php 
-		
-		// Update status message
-		if( isset($_SESSION['update']) ){
-			if( $_SESSION['update']==true ) echo "<div class='alert alert-success'>Record was changed</div> ";
-			else echo "<div class='alert alert-danger'>Record was NOT changed</div>";
-			session_destroy();
-		}
 
-		?>
 		<div class="page-header">
 			<h1>Read Products</h1>
 		</div>
@@ -59,7 +60,7 @@
 							echo "<a href='admin.php?c=home&a=read&id={$id}' class='btn btn-info m-r-1em'>Read</a>";
 
 							// We will use this links on next part of this post
-							echo "<a href='admin.php?c=home&a=update&id_up={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
+							echo "<a href='admin.php?c=home&a=update&id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
 
 							// We will use this links on next part of this post
 							echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";
@@ -70,14 +71,17 @@
 			?>
 
 			<!-- Update form -->
-			<?php
-	        if( isset($_POST['update_form']) ) {
-	        	session_start();
-	        	//$_SESSION['update'] = false;
-	            $_SESSION['name'] = $_POST['name'];
-	            $_SESSION['description'] = $_POST['description'];
-	            $_SESSION['price'] = $_POST['price'];
-	        }
+			<?php 
+        
+		        // Update status message
+		        if( isset($_POST['update_form']) ){
+		            session_start();
+		            $_SESSION['update'] = true;
+		            $_SESSION['name'] = $_POST['name'];
+		            $_SESSION['description'] = $_POST['description'];
+		            $_SESSION['price'] = $_POST['price'];
+		        } else $_SESSION['update'] = false;
+
 	        ?>
 
 		</table>
@@ -98,7 +102,7 @@
 			if( answer ) {
 				// If user clicked OK
 				// Pass the id to delete.php and execute the delete query
-				window.location = 'delete.php?id=' + id;
+				window.location = 'admin.php?c=home&a=delete&id=' + id;
 			}
 		}
 	</script>
