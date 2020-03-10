@@ -7,7 +7,6 @@ define('PATH_VIEW', __DIR__ . 'public');
 
 // Get system config
 require (PATH_SYSTEM . '/config/config.php');
-
 // Include Common file 
 include_once PATH_SYSTEM . '/core/Common.php';
 

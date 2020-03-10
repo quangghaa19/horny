@@ -21,7 +21,7 @@ function load()
     
     // Check existation of controller file in PATH_APPLICATION
     if (!file_exists(PATH_APPLICATION . '/controller/' . $controller . '.php')){
-        die ('Cannot find controller in PATH_APPLICATION');
+        die ('Cannot find '. $controller . ' in '. PATH_APPLICATION);
     }
     
     // Include FATHER controller
@@ -32,7 +32,7 @@ function load()
 
     // Check existation
     if (!class_exists($controller)){
-        die ('Không tìm thấy controller');
+        die ('Class ' . $controller . ' is not defined!!');
     }
 
     // Initiate controller
@@ -40,7 +40,7 @@ function load()
 
     // Check action in SON controller exist or not
     if ( !method_exists($controllerObject, $action)){
-        die ('Không tìm thấy action');
+        die ('Action ' . $action . ' do not exists!!!');
     }
     
     // Run application

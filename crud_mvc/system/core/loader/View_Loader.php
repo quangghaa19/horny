@@ -21,7 +21,7 @@ class View_Loader
         
         // Convert view into variable
         ob_start();
-        require_once PATH_APPLICATION . '/view/' . $view . '.php';
+        require_once PATH_APPLICATION . '/view/' . $view . '.php'; // Gọi giao diện cần hiển thị
         $content = ob_get_contents();
         ob_end_clean();
         

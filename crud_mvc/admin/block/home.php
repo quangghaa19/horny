@@ -48,5 +48,27 @@ class Home{
 		// Return data 
 		return $row;
 	}
+	public function update_a_record(){
+		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(read_one)');
+		$db = new Crud_Model();
+		// Set table name and id key
+		$db->set_all('products', 'id');
+		if( isset($_SESSION['update'])&&$_SESSION['update']==true ){
+			$data = array('name'=>$_SESSION['name'], 'description'=>$_SESSION['description'], 'price'=>$_SESSION['price']);
+
+			if( $db->update_by_id($data, $id) ){
+				header('location: admin.php?c=home');
+			} 
+			
+			session_destroy();
+		}
+	}
+	public function delete_a_record(){
+		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(DELETE)');
+		$db = new Crud_Model();
+		$db->set_all('products', 'id');
+		if( $db->delete_by_id($id) ) header('location: admin.php?c=home');
+		else die('Unable to delete record');
+	}
 }
 
