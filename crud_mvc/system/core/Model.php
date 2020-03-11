@@ -50,24 +50,24 @@ class Model
     {
         
         $this->connect();
-         
-        $result = mysqli_query($this->__conn, $sql);
- 
-        if (!$result){
-            die ('Câu truy vấn bị sai');
+
+        try {
+            $result = mysqli_query($this->__conn, $sql);
+            if ( !$result ){
+                die ('Error query');
+            }
+            $return = array();
+            // Loop through result
+            while ($row = mysqli_fetch_assoc($result)){
+                $return[] = $row;
+            }
+            // Release memory
+            mysqli_free_result($result);
+            return $return;
+        } catch (Exception $e) {
+            $e->getMessage();
         }
- 
-        $return = array();
- 
-        // Loop through result
-        while ($row = mysqli_fetch_assoc($result)){
-            $return[] = $row;
-        }
- 
-        // Release memory
-        mysqli_free_result($result);
- 
-        return $return;
+
     }
 
     // Get one row
@@ -91,12 +91,10 @@ class Model
     {
         
         $this->connect();
- 
         // Field list
         $field_list = '';
         // Value list
         $value_list = '';
- 
         // Loop through data
         foreach ($data as $key => $value){
             $field_list .= ",$key";
@@ -105,8 +103,12 @@ class Model
  
         // Remove unnecessary ','
         $sql = 'INSERT INTO '.$table. '('.trim($field_list, ',').') VALUES ('.trim($value_list, ',').')';
- 
-        return mysqli_query($this->__conn, $sql);
+        try {
+            return mysqli_query($this->__conn, $sql);
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+        //return mysqli_query($this->__conn, $sql);
     }
  
     // Update function
@@ -121,8 +123,13 @@ class Model
         }
  
         $sql = 'UPDATE '.$table. ' SET '.trim($sql, ',').' WHERE '.$where;
- 
-        return mysqli_query($this->__conn, $sql);
+        
+        try {
+            return mysqli_query($this->__conn, $sql);
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+        
     }
  
     // Delete function
@@ -132,20 +139,31 @@ class Model
         $this->connect();
          
         $sql = "DELETE FROM $table WHERE $where";
-        return mysqli_query($this->__conn, $sql);
+        try {
+            return mysqli_query($this->__conn, $sql);
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+        
     }
  
     // Execute function
     public function execute($sql)
     { 
-        $result = mysqli_query($this->__conn, $sql);
+        try {
+            $result = mysqli_query($this->__conn, $sql);
  
-        if (!$result){
-            $this->_result = NULL;
-            return FALSE;
+            if (!$result){
+                $this->_result = NULL;
+                return FALSE;
+            }
+            
+            $this->_result = $result;
+            return TRUE;
+            
+        } catch (Exception $e) {
+            $e->getMessage();
         }
         
-        $this->_result = $result;
-        return TRUE;
     }
 }

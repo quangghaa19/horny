@@ -1,6 +1,6 @@
 <?php if( !defined( 'PATH_SYSTEM' ) ) die ('Bad request! ( /block/home.php )');
 
-include PATH_APPLICATION .'/model/Crud_Model.php';
+require PATH_APPLICATION .'/model/Crud_Model.php';
 
 class Home{
 
@@ -48,6 +48,7 @@ class Home{
 		// Return data 
 		return $row;
 	}
+
 	public function update_a_record(){
 		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(read_one)');
 		$db = new Crud_Model();
@@ -63,6 +64,7 @@ class Home{
 			session_destroy();
 		}
 	}
+	
 	public function delete_a_record(){
 		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(DELETE)');
 		$db = new Crud_Model();
@@ -70,5 +72,6 @@ class Home{
 		if( $db->delete_by_id($id) ) header('location: admin.php?c=home');
 		else die('Unable to delete record');
 	}
+
 }
 
