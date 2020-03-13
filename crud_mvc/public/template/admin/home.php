@@ -45,6 +45,7 @@
 				<th>Name</th>
 				<th>Description</th>
 				<th>Price</th>
+				<th>Photo</th>
 				<th>Action</th>
 			</tr>
 			<?php
@@ -61,6 +62,9 @@
 						echo "<td>{$name}</td>";
 						echo "<td>{$description}</td>";
 						echo "<td>&#36;{$price}</td>";
+						if($image) echo "<td><img src='./public/upload/{$image}' style='width:30px;' /></td>";
+						else echo "<td>No image found.</td>";
+						
 						echo "<td>";
 							// Read one record
 							echo "<a href='admin.php?c=home&a=read&id={$id}' class='btn btn-info m-r-1em'>Read</a>";
@@ -77,18 +81,7 @@
 			?>
 
 			<!-- Update form -->
-			<?php 
-        
-		        // Update status message
-		        if( isset($_POST['update_form']) ){
-		            session_start();
-		            $_SESSION['update'] = true;
-		            $_SESSION['name'] = $_POST['name'];
-		            $_SESSION['description'] = $_POST['description'];
-		            $_SESSION['price'] = $_POST['price'];
-		        } else $_SESSION['update'] = false;
-
-	        ?>
+			
 
 		</table>
 		

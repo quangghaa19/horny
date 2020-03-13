@@ -7,6 +7,11 @@ class Home_Controller extends Controller {
 
 	private $__block = NULL;
 	
+	public function save_data_formAction(){
+		if( isset($_POST['name'] ) ) echo $_POST['name'];
+		else echo "not found data";
+	}
+
 	public function indexAction() {
 		// Initiate home block to do with database
 		$this->__block = new Home();
@@ -42,7 +47,10 @@ class Home_Controller extends Controller {
 		$this->__block = new Home();
 		$this->view->load('update', $this->__block->view_detail_a_record());
 		$this->view->show();
-		$this->__block->update_a_record();
+		if( isset($_POST['update_form']) ){
+			$this->__block->update_a_record();
+			//header('location: admin.php?c=home');
+		} 
 
 	}
 

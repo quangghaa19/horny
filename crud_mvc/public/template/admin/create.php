@@ -24,7 +24,7 @@
         </div>
       
     <!-- html form to create product will be here -->
-          <form action="admin.php?c=home&a=create" method="post">
+          <form action="admin.php?c=home&a=create" method="post" enctype="multipart/form-data">
               <table class="table table-hover table-responsive table-borderd">
                   <tr>
                       <td>Name</td>
@@ -37,6 +37,10 @@
                   <tr>
                       <td>Price</td>
                       <td><input type="text" name="price" class="form-control" /></td>
+                  </tr>
+                  <tr>
+                      <td>Photo</td>
+                      <td><input type="file" name="image" /></td>
                   </tr>
                   <tr>
                       <td></td>
@@ -57,6 +61,12 @@
             $_SESSION['name'] = $_POST['name'];
             $_SESSION['description'] = $_POST['description'];
             $_SESSION['price'] = $_POST['price'];
+            // new 'image' field
+                $image = !empty($_FILES["image"]["name"])
+                ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"])
+                : "";
+                $image = htmlspecialchars(strip_tags($image));
+            $_SESSION['image'] = $image;
           } ?>
 
     </div> <!-- end .container -->

@@ -20,14 +20,13 @@
                 if( isset($_POST['update_form']) ){
                     session_start();
                     $_SESSION['update'] = true;
+                    if( isset($_GET['id']) ) $_SESSION['id'] = $_GET['id'];
+                    else die("CANNOT GET id (update.php)");
                     $_SESSION['name'] = $_POST['name'];
                     $_SESSION['description'] = $_POST['description'];
                     $_SESSION['price'] = $_POST['price'];
                     
-                    /*if( $_SESSION['update']==true ) echo "<div class='alert alert-success'>Record was changed</div> ";
-                    else echo "<div class='alert alert-danger'>Record was NOT changed</div>";
-                    session_destroy();*/
-                } else $_SESSION['update'] = false;
+                }
 
             ?>
     <!-- container -->
@@ -38,7 +37,7 @@
             <h1>Update Products</h1>
         </div>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] ."?c=home&a=update" . "&id={$id}" ) ?>" method="post">
+        <form action="" method="post">
             <tr>
                 <td>Name</td>
                 <td><input type="text" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES); ?>" class=form-control /></td>
