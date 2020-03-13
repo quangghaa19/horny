@@ -37,6 +37,12 @@
                 <td><?php echo htmlspecialchars($price, ENT_QUOTES); ?></td>
             </tr>
             <tr>
+                <td>Image</td>
+                <td>
+                <?php echo $image ? "<img src='public/upload/{$image}' style='width:300px;' />" : "No image found.";  ?>
+                </td>
+            </tr>
+            <tr>
                 <td></td>
                 <td>
                     <a href="admin.php?c=home" class="btn btn-danger">Back to read products</a>
