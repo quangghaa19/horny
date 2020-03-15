@@ -123,7 +123,7 @@ class Home{
 			$data = array('name'=>$_SESSION['name'], 'description'=>$_SESSION['description'], 'price'=>$_SESSION['price']);
 
 			if( $db->update_by_id($data, $id) ){
-				header('location: admin.php?c=home');
+				header('location: all_products.html');
 			} else {
 				die('Can not update');
 			}
@@ -136,7 +136,7 @@ class Home{
 		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(DELETE)');
 		$db = new Crud_Model();
 		$db->set_all('products', 'id');
-		if( $db->delete_by_id($id) ) header('location: admin.php?c=home');
+		if( $db->delete_by_id($id) ) header('location: all_products.html');
 		else die('Unable to delete record');
 	}
 

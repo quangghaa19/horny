@@ -24,7 +24,7 @@
         </div>
       
     <!-- html form to create product will be here -->
-          <form action="admin.php?c=home&a=create" method="post" enctype="multipart/form-data">
+          <form action="add_a_product.html" method="post" enctype="multipart/form-data">
               <table class="table table-hover table-responsive table-borderd">
                   <tr>
                       <td>Name</td>
@@ -46,7 +46,7 @@
                       <td></td>
                       <td>
                           <input type="submit" name="form_click" value="Save" class="btn btn-primary" />
-                          <a href="admin.php?c=home" class="btn btn-danger">Back to read products</a>
+                          <a href="all_products.html" class="btn btn-danger">Back to read products</a>
                       </td>
                   </tr>
               </table>

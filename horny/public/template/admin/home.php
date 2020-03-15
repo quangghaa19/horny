@@ -38,7 +38,7 @@
 		<div class="page-header">
 			<h1>Read Products</h1>
 		</div>
-		<a href='admin.php?c=home&a=create' class='btn btn-primary m-b-1em'>Create A New Product</a>
+		<a href='add_a_product.html' class='btn btn-primary m-b-1em'>Create A New Product</a>
 		<table class='table table-hover table-responsive table-bordered'>
 			<tr>
 				<th>ID</th>
@@ -67,10 +67,12 @@
 						
 						echo "<td>";
 							// Read one record
-							echo "<a href='admin.php?c=home&a=read&id={$id}' class='btn btn-info m-r-1em'>Read</a>";
+							// href='admin.php?c=home&a=read&id={$id}
+							echo "<a href='product_number_{$id}.html' class='btn btn-info m-r-1em'>Read</a>";
 
 							// We will use this links on next part of this post
-							echo "<a href='admin.php?c=home&a=update&id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
+							// href='admin.php?c=home&a=update&id={$id}
+							echo "<a href='edit_product_number_{$id}.html' class='btn btn-primary m-r-1em'>Edit</a>";
 
 							// We will use this links on next part of this post
 							echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";

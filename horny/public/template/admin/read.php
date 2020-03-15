@@ -39,13 +39,13 @@
             <tr>
                 <td>Image</td>
                 <td>
-                <?php echo $image ? "<img src='public/upload/{$image}' style='width:300px;' />" : "No image found.";  ?>
+                <?php echo $image ? "<img src='./public/upload/{$image}' style='width:300px;' />" : "No image found.";  ?>
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <a href="admin.php?c=home" class="btn btn-danger">Back to read products</a>
+                    <a href="all_products.html" class="btn btn-danger">Back to read products</a>
                 </td>
             </tr>
         </table>

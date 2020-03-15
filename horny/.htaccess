@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# All products page
+RewriteRule ^all_products.html$ admin.php?c=home
+
+# Add product page
+RewriteRule ^add_a_product.html$ admin.php?c=home&a=create
+
+# View detail a product page
+RewriteRule ^product_number_([0-9]+).html$ admin.php?c=home&a=read&id=$1
+
+# Edit a product page
+RewriteRule ^edit_product_number_([0-9]+).html$ admin.php?c=home&a=update&id=$1
+
