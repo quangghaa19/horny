@@ -54,7 +54,7 @@
                 <td></td>
                 <td>
                     <input type="submit" name ="update_form" value="Save changes" class="btn btn-primary" />
-                    <a href="admin.php?c=home" class="btn btn-danger">Back to read products</a>
+                    <a href="all_products.html" class="btn btn-danger">Back to read products</a>
                 </td>
             </tr>
         </form>
