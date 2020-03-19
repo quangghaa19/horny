@@ -14,21 +14,7 @@
      
 </head>
 <body>
-    <?php 
-        
-                // Update status message
-                if( isset($_POST['update_form']) ){
-                    session_start();
-                    $_SESSION['update'] = true;
-                    if( isset($_GET['id']) ) $_SESSION['id'] = $_GET['id'];
-                    else die("CANNOT GET id (update.php)");
-                    $_SESSION['name'] = $_POST['name'];
-                    $_SESSION['description'] = $_POST['description'];
-                    $_SESSION['price'] = $_POST['price'];
-                    
-                }
-
-            ?>
+   
     <!-- container -->
     <div class="container"> 
         
@@ -37,26 +23,43 @@
             <h1>Update Products</h1>
         </div>
 
-        <form action="" method="post">
-            <tr>
-                <td>Name</td>
-                <td><input type="text" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES); ?>" class=form-control /></td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td><textarea name='description' class="form-control"><?php echo htmlspecialchars($description, ENT_QUOTES); ?></textarea></td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td><input type="text" name="price" value="<?php echo htmlspecialchars($price, ENT_QUOTES); ?>"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" name ="update_form" value="Save changes" class="btn btn-primary" />
-                    <a href="all_products.html" class="btn btn-danger">Back to read products</a>
-                </td>
-            </tr>
+        <form action="just-edit-a-product.html" method="post" enctype="multipart/form-data">
+            <table class="table table-hover table-responsive table-borderd">
+                <tr style="display: none;">
+                    <td>ID</td>
+                    <td><input type="text" name="id" value="<?php echo htmlspecialchars($id, ENT_QUOTES); ?>"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES); ?>" class=form-control /></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><textarea name='description' class="form-control"><?php echo htmlspecialchars($description, ENT_QUOTES); ?></textarea></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input class="form-control" type="text" name="price" value="<?php echo htmlspecialchars($price, ENT_QUOTES); ?>"></td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td>
+                    <?php echo $image ? "<img src='./public/upload/{$image}' style='width:150px;' />" : "No image found.";  ?>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="file" name="image" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name ="update_form" value="Save changes" class="btn btn-primary" />
+                        <a href="all-products.html" class="btn btn-danger">Back to read products</a>
+                    </td>
+                </tr>
+            </table>
         </form>
 
         

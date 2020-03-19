@@ -45,7 +45,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <a href="all_products.html" class="btn btn-danger">Back to read products</a>
+                    <a href="all-products.html" class="btn btn-danger">Back to read products</a>
                 </td>
             </tr>
         </table>

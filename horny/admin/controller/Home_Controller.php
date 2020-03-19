@@ -1,62 +1,82 @@
 <?php if( !defined('PATH_SYSTEM') ) die ( "Bad requested AAA!" );
 
-//include PATH_APPLICATION .'/model/Crud_Model.php';
-include PATH_APPLICATION .'/block/home.php';
+include PATH_APPLICATION .'/controller/Dealer.php';
 
 class Home_Controller extends Controller {
 
 	private $__block = NULL;
-	
-	public function save_data_formAction(){
-		if( isset($_POST['name'] ) ) echo $_POST['name'];
-		else echo "not found data";
-	}
+	private $__dealer = NULL;
+	private $__data = array();
 
-	public function indexAction() {
-		// Initiate home block to do with database
-		$this->__block = new Home();
-		// Load home view and data that's got from database
-		$this->view->load('home', $this->__block->get_records_from_db());
-		// Show 
+	public function viewAction(){
+		// Show all products
+		$this->__dealer = new Dealer();
+		$this->view->load('home', $this->__dealer->get_all());
 		$this->view->show();
 	}
 
-	public function createAction(){
-		// Initiate empty date 
-		$none = array();
-		// Load view and data
-		$this->view->load('create', $none);
-		// Show view and data
+	public function addAction(){
+		// Only show create page
+		$this->view->load('create', $this->__data);
 		$this->view->show();
-		// Initiate home block to do with database
-		$this->__block = new Home();
-		// Execute function add_a_new_record
-		$this->__block->add_a_new_record();
+	}
+
+	public function editAction(){
+		// Only show edit page
+		$this->__dealer = new Dealer();
+		$this->view->load('update', $this->__dealer->detail());
+		$this->view->show();
+	}
+
+	public function saveAction(){
+		// Save changes into the database
+		if( isset($_POST['add_form'])||isset($_POST['update_form']) ){
+			// new 'image' field
+            $image = !empty($_FILES["image"]["name"])
+            ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"])
+            : "";
+            $image = htmlspecialchars(strip_tags($image));
+            $_POST['image'] = $image;
+
+            // data
+            if( isset($_POST['id']) ){
+            	// Update data
+            	$this->__data = array('id'=>$_POST['id'], 'name'=>$_POST['name'], 'description'=>$_POST['description'], 'price'=>$_POST['price'], 'image'=>$_POST['image']);
+            } else {
+            	// Add data
+            	$this->__data = array('name'=>$_POST['name'], 'description'=>$_POST['description'], 'price'=>$_POST['price'], 'image'=>$_POST['image']);
+            }
+			//var_dump($this->__data);
+			// Push in Dealer();
+			$this->__dealer = new Dealer();
+			$this->__dealer->set_data($this->__data);
+
+			$this->__dealer->save();
+
+			// Call home page
+			$this->view->load('home', $this->__dealer->get_all());
+			$this->view->show();
+
+		}
 	}
 
 	public function readAction(){
-		// Initiate 
-		$this->__block = new Home();
-		// Call function
-		$this->view->load('read', $this->__block->view_detail_a_record());
-		// Show view and data
+		// Show detail one product
+		$this->__dealer = new Dealer();
+		$this->view->load('read', $this->__dealer->detail());
 		$this->view->show();
-	}
-
-	public function updateAction(){
-		$this->__block = new Home();
-		$this->view->load('update', $this->__block->view_detail_a_record());
-		$this->view->show();
-		if( isset($_POST['update_form']) ){
-			$this->__block->update_a_record();
-			//header('location: admin.php?c=home');
-		} 
-
 	}
 
 	public function deleteAction(){
-		$this->__block = new Home();
-		$this->__block->delete_a_record();
+		// Delete a product
+		$this->__dealer = new Dealer();
+		$this->__dealer->delete();
+		$this->view->load('home', $this->__dealer->get_all());
+		$this->view->show();
 	}
 
+	public function errorAction(){
+		$this->view->load('error', $this->__data);
+		$this->view->show();
+	}
 } ?>
