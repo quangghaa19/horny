@@ -21,24 +21,13 @@
 
 </head>
 <body>
-	<!-- Update message -->
-	
-	<!-- Delete message -->
-	<?php 
-	// Delete message prompt will be here
-		$action = isset($_GET['a']) ? $_GET['a'] : "";
-		// If it was redirected from delete.php
-		if( $action=='delete' ){
-			echo "<div class='alert alert-success'>Record was deleted.</div>";
-	} ?>
-	
 	<!-- container -->
 	<div class="container">
 
 		<div class="page-header">
-			<h1>Read Products</h1>
+			<h1>All Products</h1>
 		</div>
-		<a href='add_a_product.html' class='btn btn-primary m-b-1em'>Create A New Product</a>
+		<a href='add-product-form.html' class='btn btn-primary m-b-1em'>Create A New Product</a>
 		<table class='table table-hover table-responsive table-bordered'>
 			<tr>
 				<th>ID</th>
@@ -65,14 +54,24 @@
 						if($image) echo "<td><img src='./public/upload/{$image}' style='width:30px;' /></td>";
 						else echo "<td>No image found.</td>";
 						
-						echo "<td>";
+						echo "<td style=\"display: flex; border: none;\">";
 							// Read one record
 							// href='admin.php?c=home&a=read&id={$id}
-							echo "<a href='product_number_{$id}.html' class='btn btn-info m-r-1em'>Read</a>";
+							//echo "<a href='detail-product.html?id={$id}' class='btn btn-info m-r-1em'>Read</a>";
 
 							// We will use this links on next part of this post
 							// href='admin.php?c=home&a=update&id={$id}
-							echo "<a href='edit_product_number_{$id}.html' class='btn btn-primary m-r-1em'>Edit</a>";
+							echo "<form action=\"detail-product.html\" method=\"post\" class=\"m-r-1em\">
+								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
+								<input type=\"submit\" name =\"id_read\" value=\"Read\" class=\"btn btn-info\"  />
+								</form>";
+							
+							//echo "<a href='admin.php?c=home&a=edit&id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
+
+							echo "<form action=\"edit-product-form.html\" method=\"post\" class=\"m-r-1em\">
+								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
+								<input type=\"submit\" name =\"id_edit\" value=\"Edit\" class=\"btn btn-primary\" />
+								</form>";
 
 							// We will use this links on next part of this post
 							echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";
@@ -81,9 +80,6 @@
 				
 			}
 			?>
-
-			<!-- Update form -->
-			
 
 		</table>
 		

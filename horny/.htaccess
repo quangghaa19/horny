@@ -1,14 +1,11 @@
 RewriteEngine On
 
-# All products page
-RewriteRule ^all_products.html$ admin.php?c=home
+# deny access to all files in admin and system folder, redirect any call to that folder to admin.php
+RewriteRule ^admin.*$ admin.php
+RewriteRule ^system.*$ admin.php
 
-# Add product page
-RewriteRule ^add_a_product.html$ admin.php?c=home&a=create
+# allow direct access to all other files ( like images, css or scripts )
+RewriteCond %{REQUEST_FILENAME} !-f
 
-# View detail a product page
-RewriteRule ^product_number_([0-9]+).html$ admin.php?c=home&a=read&id=$1
-
-# Edit a product page
-RewriteRule ^edit_product_number_([0-9]+).html$ admin.php?c=home&a=update&id=$1
-
+# redirect anything else to admin.php
+RewriteRule ^(.*)$ admin.php [QSA,L]

@@ -18,7 +18,7 @@ class View_Loader
     {
         // 
         extract($data);
-        
+        //var_dump($data);
         // Convert view into variable
         ob_start();
         require_once PATH_APPLICATION . '/view/' . $view . '.php'; // Gọi giao diện cần hiển thị

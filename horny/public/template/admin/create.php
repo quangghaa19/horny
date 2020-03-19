@@ -24,7 +24,7 @@
         </div>
       
     <!-- html form to create product will be here -->
-          <form action="add_a_product.html" method="post" enctype="multipart/form-data">
+          <form action="just-add-a-new-one.html" method="post" enctype="multipart/form-data">
               <table class="table table-hover table-responsive table-borderd">
                   <tr>
                       <td>Name</td>
@@ -45,29 +45,13 @@
                   <tr>
                       <td></td>
                       <td>
-                          <input type="submit" name="form_click" value="Save" class="btn btn-primary" />
-                          <a href="all_products.html" class="btn btn-danger">Back to read products</a>
+                          <input type="submit" name="add_form" value="Save" class="btn btn-primary" />
+                          <a href="all-products.html" class="btn btn-danger">Back to read products</a>
                       </td>
                   </tr>
               </table>
           </form>
 
-            <!-- php code to create a new record into the database -->
-          <?php
-          //$_SESSION['create'] = false;
-          if( isset($_POST['form_click']) ){
-            session_start();
-            $_SESSION['add'] = true;
-            $_SESSION['name'] = $_POST['name'];
-            $_SESSION['description'] = $_POST['description'];
-            $_SESSION['price'] = $_POST['price'];
-            // new 'image' field
-                $image = !empty($_FILES["image"]["name"])
-                ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"])
-                : "";
-                $image = htmlspecialchars(strip_tags($image));
-            $_SESSION['image'] = $image;
-          } ?>
 
     </div> <!-- end .container -->
       
