@@ -61,20 +61,24 @@
 
 							// We will use this links on next part of this post
 							// href='admin.php?c=home&a=update&id={$id}
-							echo "<form action=\"detail-product.html\" method=\"post\" class=\"m-r-1em\">
+							echo "<form action=\"detail-product.html\" method=\"post\" class=\"m-r-1em m-l-2em m-b-0em\">
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
 								<input type=\"submit\" name =\"id_read\" value=\"Read\" class=\"btn btn-info\"  />
 								</form>";
 							
 							//echo "<a href='admin.php?c=home&a=edit&id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
 
-							echo "<form action=\"edit-product-form.html\" method=\"post\" class=\"m-r-1em\">
+							echo "<form action=\"edit-product-form.html\" method=\"post\" class=\"m-r-1em m-b-0em\">
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
 								<input type=\"submit\" name =\"id_edit\" value=\"Edit\" class=\"btn btn-primary\" />
 								</form>";
 
 							// We will use this links on next part of this post
-							echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";
+							//echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";
+							echo "<form action=\"just-delete-a-product.html\" method=\"post\" class=\" m-b-0em\">
+								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
+								<input type=\"submit\" name =\"id_delete\" value=\"Delete\" class=\"btn btn-danger\" />
+								</form>";
 						echo "</td>";
 					echo "</tr>";
 				

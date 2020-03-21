@@ -4,21 +4,14 @@
  */
 
 function detectURL(){
-    // horny/admin.php                            /horny/admin.php/all-products.html
-    // horny/admin.php?c=home                     horny/admin/all-products.html
-    // horny/admin.php?c=home&a=add               horny/admin/add-product.html
-    // horny/admin.php?c=home&a=edit&id={$id}     horny/admin/edit-product-id.html
-    // horny/admin.php?c=home&a=save              horny/admin/all-products.html
-    // horny/admin.php?c=home&a=delete&id={$id}   horny/admin/all-products.html
-    // horny/admin.php?c=home&a=read&id={$id}     horny/admin/detail-product-id.html
     $result = array();
-
     $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
     $elements = explode('/', $path);                // Split path on slashes
-    $first = array_shift($elements);                    // Pop off the first item
-    if( $first==NULL ){
+    $first = array_shift($elements);                // Pop off the first item                  
+    if( $elements[0]=="" ){
         $result = array('c'=>'home', 'a'=>'view');
-    }
+        
+    } else 
     
     switch (array_shift($elements)) {
         case 'all-products.html':
