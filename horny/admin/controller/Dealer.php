@@ -66,11 +66,16 @@ class Dealer {
 		// Execute query
 		$row = $db->select_by_id('*', $id);
 		// Return data 
+		//var_dump($row);
+
+		//die("NO");
+
 		return $row;
 	}
 
 	public function delete(){
-		$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record not found!(DELETE)');
+		if( isset($_POST['id_delete']) )
+		$id = isset($_POST['id']) ? $_POST['id'] : die('ERROR: Record not found!(DELETE)');
 		$db = new Crud_Model();
 		$db->set_all('products', 'id');
 		session_start();
