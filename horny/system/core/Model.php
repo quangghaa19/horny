@@ -129,7 +129,7 @@ class Model
         } catch (Exception $e) {
             $e->getMessage();
         }
-        
+        return false;
     }
  
     // Delete function

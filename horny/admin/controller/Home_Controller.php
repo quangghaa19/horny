@@ -32,10 +32,12 @@ class Home_Controller extends Controller {
 		// Save changes into the database
 		if( isset($_POST['add_form'])||isset($_POST['update_form']) ){
 			// new 'image' field
+			// sha1_file($_FILES['image']['tmp_name']) . "-" . 
             $image = !empty($_FILES["image"]["name"])
-            ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"])
+            ? basename($_FILES["image"]["name"])
             : "";
             $image = htmlspecialchars(strip_tags($image));
+            var_dump($image);
             $_POST['image'] = $image;
 
             // data
@@ -79,4 +81,6 @@ class Home_Controller extends Controller {
 		$this->view->load('error', $this->__data);
 		$this->view->show();
 	}
+
+	
 } ?>
