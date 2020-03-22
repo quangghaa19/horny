@@ -18,6 +18,8 @@
 	<!-- Confirm delete record will be here -->
 	<script src="./public/js/confirm_delete.js"></script>
 	
+	<!-- Edit AJAX -->
+	<script src="./public/js/edit-ajax.js"></script>
 
 </head>
 <body>
@@ -46,42 +48,41 @@
 					extract($row);
 
 					// Creating new table row per record
-					echo "<tr>";
-						echo "<td>{$id}</td>";
-						echo "<td>{$name}</td>";
-						echo "<td>{$description}</td>";
-						echo "<td>&#36;{$price}</td>";
-						if($image) echo "<td><img src='./public/upload/{$image}' style='width:30px;' /></td>";
-						else echo "<td>No image found.</td>";
+					
+					echo "<tr id=\"row-{$id}\">";
+						echo "<td id = \"id-{$id}\">{$id}</td>";
+						echo "<td id = \"name-{$id}\">{$name}</td>";
+						echo "<td id = \"description-{$id}\">{$description}</td>";
+						echo "<td id = \"price-{$id}\">&#36;{$price}</td>";
+						if($image) echo "<td id=\"image-{$id}\"><img id=\"h-img-{$id}\" src='./public/upload/{$image}' style='width:30px;' /></td>";
+						else echo "<td id=\"image-{$id}\"><img id=\"h-img-{$id}\" src='' />No image found.</td>";
 						
 						echo "<td style=\"display: flex; border: none;\">";
 							// Read one record
-							// href='admin.php?c=home&a=read&id={$id}
-							//echo "<a href='detail-product.html?id={$id}' class='btn btn-info m-r-1em'>Read</a>";
-
-							// We will use this links on next part of this post
-							// href='admin.php?c=home&a=update&id={$id}
 							echo "<form action=\"detail-product.html\" method=\"post\" class=\"m-r-1em m-l-2em m-b-0em\">
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
 								<input type=\"submit\" name =\"id_read\" value=\"Read\" class=\"btn btn-info\"  />
 								</form>";
 							
-							//echo "<a href='admin.php?c=home&a=edit&id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
-
-							echo "<form action=\"edit-product-form.html\" method=\"post\" class=\"m-r-1em m-b-0em\">
+							// Edit a record
+							// action=\"edit-product-form.html\"
+							/*echo "<form method=\"post\" class=\"m-r-1em m-b-0em\">
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
-								<input type=\"submit\" name =\"id_edit\" value=\"Edit\" class=\"btn btn-primary\" />
-								</form>";
+								<input type=\"submit\" name =\"id_edit\" value=\"Edit\" class=\"btn btn-primary\" onclick=\"load_ajax({$id})\" />
+								</form>";*/
 
-							// We will use this links on next part of this post
-							//echo "<a href='#' onclick='delete_user({$id});' class='btn btn-danger'>Delete</a>";
+							echo "<form class=\"m-r-1em\">
+								<input type=\"button\" name =\"btn_edit\" value=\"Edit\" class=\"btn btn-primary\" onclick=\"edit_ajax({$id})\" />
+								</form>";
+							// Delete a record
 							echo "<form action=\"just-delete-a-product.html\" method=\"post\" class=\" m-b-0em\">
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
 								<input type=\"submit\" name =\"id_delete\" value=\"Delete\" class=\"btn btn-danger\" />
 								</form>";
+
 						echo "</td>";
 					echo "</tr>";
-				
+					
 			}
 			?>
 

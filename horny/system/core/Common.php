@@ -35,6 +35,9 @@ function detectURL(){
         case 'just-delete-a-product.html':
             $result = array('c'=>'home', 'a'=>'delete');
             break;
+        case 'a-home-row.html':
+            $result = array('c'=>'home', 'a'=>'a_home_row');
+            break;
         default:
             $result = array('c'=>'home', 'a'=>'error');
             break;

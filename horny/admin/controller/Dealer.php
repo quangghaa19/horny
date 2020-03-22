@@ -1,4 +1,4 @@
-<?php if( !defined('PATH_SYSTEM') ) die ( "Bad requested AAA!" );
+<?php 
 
 include PATH_APPLICATION .'/model/Crud_Model.php';
 
@@ -53,6 +53,30 @@ class Dealer {
 	        			return false;
 	        		}
 	        	}
+	}
+
+	public function save_ajax(){
+		$db = new Crud_Model();
+		session_start();
+		if( $image ) {
+			$target_directory = PATH_VIEW . "/upload/";
+	        $target_file = $target_directory . $image;
+	        $file_type = pathinfo($target_file, PATHINFO_EXTENSION);
+	        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+	        $_SESSION['image_message'] = true;
+		} else $_SESSION['image_message'] = false;
+
+		$db->set_all('products', 'id');
+
+		if( $db->update_by_id($this->__data, $this->__data['id']) ){
+	        			$_SESSION['update_message'] = true;
+	        			return true;
+	        		} else {
+	        			$_SESSION['update_message'] = false;
+	        			return false;
+	        		}
+
+	      		
 	}
 
 	public function detail(){
