@@ -6,14 +6,18 @@
 function detectURL(){
     $result = array();
     $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
+    //var_dump($path);
     $elements = explode('/', $path);                // Split path on slashes
-    $first = array_shift($elements);                // Pop off the first item                  
-    if( $elements[0]=="" ){
+    //var_dump(count($elements));
+    //var_dump($elements);
+    //$first = array_shift($elements);                // Pop off the first item  
+
+    if( $elements[count($elements)-1]=="" ){
         $result = array('c'=>'home', 'a'=>'view');
         
     } else 
     
-    switch (array_shift($elements)) {
+    switch ($elements[count($elements)-1]) {
         case 'all-products.html':
             $result = array('c'=>'home', 'a'=>'view');
             break;
