@@ -1,3 +1,4 @@
+
 .m-r-1em{
 	margin-right: 1em;
 }
@@ -16,4 +17,9 @@
 
 .light-grey{
 	background-color: #d3d3d36e;
+}
+
+.p-l-r-0em{
+	padding-left: 0em;
+	padding-right: 0em;
 }

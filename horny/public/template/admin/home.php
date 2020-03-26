@@ -63,14 +63,7 @@
 								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
 								<input type=\"submit\" name =\"id_read\" value=\"Read\" class=\"btn btn-info\"  />
 								</form>";
-							
-							// Edit a record
-							// action=\"edit-product-form.html\"
-							/*echo "<form method=\"post\" class=\"m-r-1em m-b-0em\">
-								<input type=\"text\" name=\"id\" value=\"{$id}\" style=\"display:none;\">
-								<input type=\"submit\" name =\"id_edit\" value=\"Edit\" class=\"btn btn-primary\" onclick=\"load_ajax({$id})\" />
-								</form>";*/
-
+								
 							echo "<form class=\"m-r-1em\">
 								<input type=\"button\" name =\"btn_edit\" value=\"Edit\" class=\"btn btn-primary\" onclick=\"edit_ajax({$id})\" />
 								</form>";

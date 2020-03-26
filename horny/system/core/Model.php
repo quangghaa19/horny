@@ -9,7 +9,7 @@ class Model
     // Result variable
     protected $_result = NULL;
     
-    // Hàm Kết Nối
+    // Connect function
     public function connect()
     {
         // If not connect   ===> connect
@@ -24,7 +24,10 @@ class Model
             
         }
     }
- 
+    
+    public function getCon(){
+        return $this->__conn;
+    }
     // Disconnect function
     public function dis_connect()
     {

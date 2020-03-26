@@ -18,6 +18,11 @@ class Crud_Model extends Model
         parent::dis_connect();
     }
 
+    // Get the last id
+    function get_last_id(){
+        return mysqli_insert_id(parent::getCon());
+    }
+
     // Set table name
     function set_table_name($_table_name){
         $this->_table_name = $_table_name;
