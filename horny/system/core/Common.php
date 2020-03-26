@@ -6,15 +6,9 @@
 function detectURL(){
     $result = array();
     $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
-    //var_dump($path);
     $elements = explode('/', $path);                // Split path on slashes
-    //var_dump(count($elements));
-    //var_dump($elements);
-    //$first = array_shift($elements);                // Pop off the first item  
-
     if( $elements[count($elements)-1]=="" ){
         $result = array('c'=>'home', 'a'=>'view');
-        
     } else 
     
     switch ($elements[count($elements)-1]) {
@@ -39,8 +33,19 @@ function detectURL(){
         case 'just-delete-a-product.html':
             $result = array('c'=>'home', 'a'=>'delete');
             break;
-        case 'a-home-row.html':
-            $result = array('c'=>'home', 'a'=>'a_home_row');
+        // EDIT-AJAX in form home 
+        case 'edit-row.html':
+            $result = array('c'=>'home', 'a'=>'edit_row');
+            break;
+        case 'save-row.html':
+            $result = array('c'=>'home', 'a'=>'save_row');
+            break;
+        // EDIT-AJAX in form add
+        case 'save-add-ajax.html':
+            $result = array('c'=>'home', 'a'=>'save_add_ajax');
+            break;
+        case 'edit-ajax.html':
+            $result = array('c'=>'home', 'a'=>'edit_ajax');
             break;
         default:
             $result = array('c'=>'home', 'a'=>'error');

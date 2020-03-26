@@ -23,33 +23,38 @@ class Dealer {
 
 	public function save(){
 		$db = new Crud_Model();
-		$image = $this->__data['image'];
-		session_start();
-		if( $image ) {
-			$target_directory = PATH_VIEW . "/upload/";
-	        $target_file = $target_directory . $image;
-	        $file_type = pathinfo($target_file, PATHINFO_EXTENSION);
-	        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-	        $_SESSION['image_message'] = true;
-		} else $_SESSION['image_message'] = false;
+		//if( array_key_exists('image', $this->__data) ) $image = $this->__data['image'];
+		if( array_key_exists('image', $this->__data) ) {
+			$image = $this->__data['image'];
+			if( $image ){
+				$target_directory = PATH_VIEW . "/upload/";
+		        $target_file = $target_directory . $image;
+		        $file_type = pathinfo($target_file, PATHINFO_EXTENSION);
+		        if(!is_dir($target_directory)){
+	                mkdir($target_directory, 0777, true);
+	            }
+		        move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+			}
+			
+		}
 
 		if( !array_key_exists('id', $this->__data) ){
 	        		$db->set_table_name('products');
 	        		if( $db->add_new($this->__data) ){
-	        			$_SESSION['add_message'] = true;
+	        			session_start();
+	        			$_SESSION['insert_id'] = $db->get_last_id();
 	        			return true;
 	        		} else {
-	        			$_SESSION['add_message'] = false;
 	        			return false;
 	        		}
 	        			
 	        	} else {
 	        		$db->set_all('products', 'id');
 	        		if( $db->update_by_id($this->__data, $this->__data['id']) ){
-	        			$_SESSION['update_message'] = true;
+	        			//$_SESSION['update_message'] = true;
 	        			return true;
 	        		} else {
-	        			$_SESSION['update_message'] = false;
+	        			//$_SESSION['update_message'] = false;
 	        			return false;
 	        		}
 	        	}

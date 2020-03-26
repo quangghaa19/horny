@@ -3,10 +3,6 @@
 			// Define links
 
 			// Get system config
-			require '../../../system/config/config.php';
-
-			include "../../../system/core/Model.php";
-
 					isset( $_POST['id'] ) ? $id = $_POST['id'] : die("No id(save)");
 					isset( $_POST['name'] ) ? $name = $_POST['name'] : die("No name (save)");
 					isset( $_POST['description'] ) ? $description = $_POST['description'] : die("No description(save)");
@@ -15,6 +11,7 @@
 					
 					$db = new Model();
 					$data = array('id'=>$_POST['id'], 'name'=>$_POST['name'], 'description'=>$_POST['description'], 'price'=>$_POST['price'], 'image'=>$_POST['image']);
+					
 					
 					if( $db->update('products', $data, 'id'.'='.$id) ) {
 

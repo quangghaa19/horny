@@ -21,7 +21,7 @@ class Home_Controller extends Controller {
 		$this->view->show();
 	}
 
-	public function editAction(){
+	/*public function editAction(){
 		// Only show edit page
 		$this->__dealer = new Dealer();
 		$this->view->load('update', $this->__dealer->detail());
@@ -60,7 +60,7 @@ class Home_Controller extends Controller {
 			$this->view->show();
 
 		}
-	}
+	}*/
 
 	public function readAction(){
 		// Show detail one product
@@ -77,10 +77,42 @@ class Home_Controller extends Controller {
 		$this->view->show();
 	}
 
+	public function edit_rowAction(){
+		isset( $_POST['id'] ) ? $id = $_POST['id'] : die("No id");
+		isset( $_POST['name'] ) ? $name = $_POST['name'] : die("No name");
+		isset( $_POST['description'] ) ? $description = $_POST['description'] : die("No description");
+		isset( $_POST['price'] ) ? $price = $_POST['price'] : die("No price");
+		$price = substr($price, 1);
+		isset( $_POST['image'] ) ? $image = $_POST['image'] : die("No image");
+		if( $image!="" ){
+			$arr = explode("/", $image);
+			$image = $arr[count($arr)-1];
+		}
+		$this->__data = array('id'=>$id, 'name'=>$name, 'description'=>$description, 'price'=>$price, 'image'=>$image);
+
+		$this->view->load('edit_row', $this->__data);
+		$this->view->show();
+	}
+
+	public function save_rowAction(){
+		$this->view->load('save_row', $this->__data);
+		$this->view->show();
+	}
+
 	public function errorAction(){
 		$this->view->load('error', $this->__data);
 		$this->view->show();
 	}
 
-	
+	// Add ajax asd
+	public function save_add_ajaxAction(){
+		$this->view->load('save_add_ajax', $this->__data);
+		$this->view->show();
+	}
+
+	//public function edit ajax in add form
+	public function edit_ajaxAction(){
+		$this->view->load('edit_ajax_inaddform', $this->__data);
+		$this->view->show();
+	}
 } ?>
